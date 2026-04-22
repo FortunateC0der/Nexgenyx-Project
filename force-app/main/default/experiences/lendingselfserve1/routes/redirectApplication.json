@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "71897bc9-d3d1-4202-8a92-a69147a5178c",
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "configurationTags" : [ ],
+  "devName" : "Redirect_Application",
+  "id" : "8f17486f-08df-4c45-882a-a6f866abfab5",
+  "label" : "Redirect Application",
+  "routeType" : "redirect-application",
+  "type" : "route",
+  "urlPrefix" : "redirect-application"
+}

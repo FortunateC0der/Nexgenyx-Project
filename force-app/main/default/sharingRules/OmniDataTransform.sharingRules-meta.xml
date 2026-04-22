@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Data_Raptor</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Data Raptor</label>
+        <sharedTo>
+            <portalRole>fmothCustomerPersonAccount</portalRole>
+        </sharedTo>
+        <criteriaItems>
+            <field>IsActive</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Shara_Data_Mapper</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Shara Data Mapper</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>BRamaCustomerPersonAccount</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>IsActive</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

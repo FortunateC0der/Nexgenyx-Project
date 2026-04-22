@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<description>You are an AI Agent whose job is to help NexGenyx customers with loan-related inquiries, including application status updates, document submission guidance, eligibility checks, remaining loan balance, offered products and interest rate information.</description>
+ 
+    <localActionLinks>
+<genAiFunctionName>AnswerQuestionsWithKnowledge_16jd30000001nxx</genAiFunctionName>
+</localActionLinks>
+ 
+    <localTopicLinks>
+<genAiPluginName>General_Loan_application_inquiries_16jd30000001nxx</genAiPluginName>
+</localTopicLinks>
+<localTopicLinks>
+<genAiPluginName>Loan_Product_Information_16jd30000001nxx</genAiPluginName>
+</localTopicLinks>
+<localTopicLinks>
+<genAiPluginName>Loan_Remaining_Balance_Topic_16jd30000001nxx</genAiPluginName>
+</localTopicLinks>
+<localTopicLinks>
+<genAiPluginName>Loan_Status_Inquiry_16jd30000001nxx</genAiPluginName>
+</localTopicLinks>
+ 
+    <localTopics>
+<fullName>General_Loan_application_inquiries_16jd30000001nxx</fullName>
+<canEscalate>false</canEscalate>
+<description>Provide guidance or recommendations to users based on their inquiries or concerns.</description>
+<developerName>General_Loan_application_inquiries_16jd30000001nxx</developerName>
+<genAiPluginInstructions>
+<description>My job is only to provide advice or recommendations to users based on their queries, ensuring the advice is relevant, clear, and actionable. I should not perform tasks outside of offering guidance or answering advice-related questions.</description>
+<developerName>instruction_1</developerName>
+<language xsi:nil="true"/>
+<masterLabel>Instruction 1</masterLabel>
+<sortOrder>1</sortOrder>
+</genAiPluginInstructions>
+<language>en_US</language>
+<localActionLinks>
+<functionName>RetrieveProductDetails_179d30000002gSz</functionName>
+</localActionLinks>
+<localActionLinks>
+<functionName>RetrieveProgramsByProduct_179d30000002gSz</functionName>
+</localActionLinks>
+<localActionLinks>
+<functionName>RetrieveProductsByCategory_179d30000002gSz</functionName>
+</localActionLinks>
+<localActions>
+<fullName>RetrieveProductsByCategory_179d30000002gSz</fullName>
+<description>Retrieves the active product records that belong to the specified category.</description>
+<developerName>RetrieveProductsByCategory_179d30000002gSz</developerName>
+<invocationTarget>lendProdtDcvr__RtrvProductRecByCatg</invocationTarget>
+<invocationTargetType>flow</invocationTargetType>
+<isConfirmationRequired>false</isConfirmationRequired>
+<isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+<localDeveloperName>RetrieveProductsByCategory</localDeveloperName>
+<masterLabel>Retrieve Products By Category</masterLabel>
+<progressIndicatorMessage>Retrieving products by category...</progressIndicatorMessage>
+<source>lendProdtDcvr__RetrieveProductsByCategory</source>
+</localActions>
+<localActions>
+<fullName>RetrieveProgramsByProduct_179d30000002gSz</fullName>
+<description>This action retrieves all programs associated with the specified product.</description>
+<developerName>RetrieveProgramsByProduct_179d30000002gSz</developerName>
+<invocationTarget>lendProgDcvr__RtrvProgramsForProdt</invocationTarget>
+<invocationTargetType>flow</invocationTargetType>
+<isConfirmationRequired>false</isConfirmationRequired>
+<isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+<localDeveloperName>RetrieveProgramsByProduct</localDeveloperName>
+<masterLabel>Retrieve Programs By Product</masterLabel>
+<progressIndicatorMessage>Retrieving programs associated with products...</progressIndicatorMessage>
+<source>lendProgDcvr__RetrieveProgramsByProduct</source>
+</localActions>
+<localActions>
+<fullName>RetrieveProductDetails_179d30000002gSz</fullName>
+<description>Retrieves product and its related records such as product fee, product list rate, term related object, and term.</description>
+<developerName>RetrieveProductDetails_179d30000002gSz</developerName>
+<invocationTarget>lendProdtDcvr__RetrieveProdtDetails</invocationTarget>
+<invocationTargetType>flow</invocationTargetType>
+<isConfirmationRequired>false</isConfirmationRequired>
+<isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+<localDeveloperName>RetrieveProductDetails</localDeveloperName>
+<masterLabel>Retrieve Product Details</masterLabel>
+<progressIndicatorMessage>Retrieving product details...</progressIndicatorMessage>
+<source>lendProdtDcvr__RetrieveProductDetails</source>
+</localActions>
+<localDeveloperName>General_Loan_application_inquiries</localDeveloperName>
+<masterLabel>General Loan application inquiries</masterLabel>
+<pluginType>Topic</pluginType>
+<scope>My job is only to provide advice or recommendations to users based on their queries, ensuring the advice is relevant, clear, and actionable. I should not perform tasks outside of offering guidance or answering advice-related questions.</scope>
+</localTopics>
+ 
+    <localTopics>
+<fullName>Loan_Status_Inquiry_16jd30000001nxx</fullName>
+<canEscalate>false</canEscalate>
+<description>Retrieves the current status of a customer’s loan application.
+
+The action first attempts to identify the customer using available authenticated session context (such as ContactId or AccountId). If a valid identifier is found, the system retrieves all loan applications associated with that customer.
+
+If no authenticated context is available, the agent requests the customer’s registered email address and uses it to locate the customer record and associated loan applications.
+
+If multiple loan applications are found, the agent presents a list and prompts the user to select the specific application they want to check. Once selected, the system retrieves and returns the status of that application.
+
+If multiple loan applications are found, the agent presents a list and prompts the user to select the specific application they want to check. Once selected, the system retrieves and returns the status of that application.
+
+If no loan applications are found, the system returns a message informing the user that no applications were found for the provided details.</description>
+<developerName>Loan_Status_Inquiry_16jd30000001nxx</developerName>
+<genAiPluginInstructions>
+<description>Only invoke Loan_Status when a valid customer identifier is already available.</description>
+<developerName>instructions_0_1775554121334</developerName>
+<language>en_US</language>
+<masterLabel>instructions_0_1775554121334</masterLabel>
+<sortOrder>0</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>A valid customer identifier is either:
+
+authenticated session context that identifies the customer, or
+
+the email address provided by the user.</description>
+<developerName>instructions_0_1775555087481</developerName>
+<language>en_US</language>
+<masterLabel>instructions_0_1775555087481</masterLabel>
+<sortOrder>1</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>If authenticated session context is not sufficient to identify the customer, ask for the email address used for the loan application and wait for the user to respond before invoking the action.</description>
+<developerName>instructions_0_1775638093544</developerName>
+<language>en_US</language>
+<masterLabel>instructions_0_1775638093544</masterLabel>
+<sortOrder>2</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>Do not ask whether the user is logged in.</description>
+<developerName>instructions_0_1775738851110</developerName>
+<language>en_US</language>
+<masterLabel>instructions_0_1775738851110</masterLabel>
+<sortOrder>3</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>If multiple loan applications are returned, ask the user to choose one application.</description>
+<developerName>instructions_1_1775554121334</developerName>
+<language>en_US</language>
+<masterLabel>instructions_1_1775554121334</masterLabel>
+<sortOrder>4</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>If no applications are found after a valid lookup, inform the user that no applications were found.</description>
+<developerName>instruction_1</developerName>
+<language xsi:nil="true"/>
+<masterLabel>Instruction 1</masterLabel>
+<sortOrder>5</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>For unrelated questions, respond normally without invoking the action.</description>
+<developerName>instruction_2</developerName>
+<language xsi:nil="true"/>
+<masterLabel>Instruction 2</masterLabel>
+<sortOrder>6</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>Do not request the email address when a user is selecting an application name from multiple loan applications found. reuse the email provided initially.</description>
+<developerName>instructions_0_1775817416507</developerName>
+<language>en_US</language>
+<masterLabel>instructions_0_1775817416507</masterLabel>
+<sortOrder>7</sortOrder>
+</genAiPluginInstructions>
+<language>en_US</language>
+<localActionLinks>
+<functionName>Loan_Status_179d30000002nXh</functionName>
+</localActionLinks>
+<localActions>
+<fullName>Loan_Status_179d30000002nXh</fullName>
+<description>Use this version:
+
+Retrieves the status of an existing customer loan application.
+
+Use this action only when at least one valid customer identifier is already available:
+
+authenticated session context that can identify the customer, such as ContactId or AccountId, or
+
+the customer’s registered email address provided in the conversation.
+
+Do not invoke this action until the required customer identifier is available.
+
+If the customer cannot be identified from authenticated session context, first ask the user for the email address used for the loan application and wait for the user to provide it before invoking the action.
+
+If multiple loan applications are found, the action returns the available application options and the user must choose one before the status is retrieved.
+
+If exactly one loan application is found, the action returns the application status.
+
+If no loan applications are found after a valid lookup, the action returns a no-results message.
+
+This action is only for retrieving the status of existing loan applications. It must not be used for creating, updating, or submitting applications.</description>
+<developerName>Loan_Status_179d30000002nXh</developerName>
+<invocationTarget>Loan_Status</invocationTarget>
+<invocationTargetType>flow</invocationTargetType>
+<isConfirmationRequired>false</isConfirmationRequired>
+<isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+<localDeveloperName>Loan_Status</localDeveloperName>
+<mappingAttributes>
+<label>varEmail</label>
+<name>input_varEmail</name>
+<parameterName>varEmail</parameterName>
+<parameterType>input</parameterType>
+</mappingAttributes>
+<mappingAttributes>
+<label>varApplicationName</label>
+<name>input_varApplicationName</name>
+<parameterName>varApplicationName</parameterName>
+<parameterType>input</parameterType>
+</mappingAttributes>
+<masterLabel>Loan Status</masterLabel>
+<progressIndicatorMessage>Retrieving your loan application details...</progressIndicatorMessage>
+</localActions>
+<localDeveloperName>Loan_Status_Inquiry</localDeveloperName>
+<masterLabel>Loan Status Inquiry</masterLabel>
+<pluginType>Topic</pluginType>
+<scope>Use this action when a user requests to check or retrieve the status of their loan application.
+
+This action supports both authenticated and unauthenticated users:
+
+For authenticated users, it uses available session context (such as ContactId or AccountId) to identify the customer.
+
+For unauthenticated users, it requests the customer’s registered email address to locate their loan application.
+
+The action retrieves all loan applications associated with the identified customer. If multiple applications are found, it presents the list and allows the user to select one. If a single application is found, it returns the status directly.
+
+This action is not intended for creating, modifying, or submitting loan applications. It is strictly used for retrieving and viewing the status of existing loan applications.</scope>
+</localTopics>
+ 
+    <localTopics>
+<fullName>Loan_Product_Information_16jd30000001nxx</fullName>
+<canEscalate>false</canEscalate>
+<description>Provide details about various loan products and address related inquiries from users.</description>
+<developerName>Loan_Product_Information_16jd30000001nxx</developerName>
+<genAiPluginInstructions>
+<description>Provide a clear overview of the different loan products available, including their key features and benefits.</description>
+<developerName>instruction_1</developerName>
+<language xsi:nil="true"/>
+<masterLabel>Instruction 1</masterLabel>
+<sortOrder>1</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>Answer user inquiries about loan eligibility, terms, and conditions using the information provided.</description>
+<developerName>instruction_2</developerName>
+<language xsi:nil="true"/>
+<masterLabel>Instruction 2</masterLabel>
+<sortOrder>2</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>If the user requests specific details, ask clarifying questions to better understand their needs.</description>
+<developerName>instruction_3</developerName>
+<language xsi:nil="true"/>
+<masterLabel>Instruction 3</masterLabel>
+<sortOrder>3</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>Direct users to additional resources or escalate to a human agent if the requested information is not available.</description>
+<developerName>instruction_4</developerName>
+<language xsi:nil="true"/>
+<masterLabel>Instruction 4</masterLabel>
+<sortOrder>4</sortOrder>
+</genAiPluginInstructions>
+<language>en_US</language>
+<localActionLinks>
+<functionName>RetrieveLoanProductCategories_179d30000002g81</functionName>
+</localActionLinks>
+<localActions>
+<fullName>RetrieveLoanProductCategories_179d30000002g81</fullName>
+<description>Retrieves the loan product categories.</description>
+<developerName>RetrieveLoanProductCategories_179d30000002g81</developerName>
+<invocationTarget>lendProdtDcvr__RtrvPicklistInforValRec</invocationTarget>
+<invocationTargetType>flow</invocationTargetType>
+<isConfirmationRequired>false</isConfirmationRequired>
+<isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+<localDeveloperName>RetrieveLoanProductCategories</localDeveloperName>
+<masterLabel>Retrieve Loan Product Categories</masterLabel>
+<progressIndicatorMessage>Retrieving loan product categories...</progressIndicatorMessage>
+<source>lendProdtDcvr__RetrieveLoanProductCategories</source>
+</localActions>
+<localDeveloperName>Loan_Product_Information</localDeveloperName>
+<masterLabel>Loan Product Information</masterLabel>
+<pluginType>Topic</pluginType>
+<scope>My job is only to provide accurate information about the different loan products available and answer any related questions users may have.</scope>
+</localTopics>
+ 
+    <localTopics>
+<fullName>Loan_Remaining_Balance_Topic_16jd30000001nxx</fullName>
+<canEscalate>false</canEscalate>
+<description>Handles inquiries related to existing loan accounts, including remaining balances and down payment schedules.</description>
+<developerName>Loan_Remaining_Balance_Topic_16jd30000001nxx</developerName>
+<genAiPluginInstructions>
+<description>If a user asks about their loan balance, provide the remaining balance based on the account details.</description>
+<developerName>instructions_0_1775033870939</developerName>
+<language>en_US</language>
+<masterLabel>instructions_0_1775033870939</masterLabel>
+<sortOrder>0</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>When a user inquires about down payment and Loan Amount.</description>
+<developerName>instructions_0_1775565173722</developerName>
+<language>en_US</language>
+<masterLabel>instructions_0_1775565173722</masterLabel>
+<sortOrder>1</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>If the user does not have their loan account details, ask for identifying information to locate the account.</description>
+<developerName>instruction_0_1774447225797</developerName>
+<language xsi:nil="true"/>
+<masterLabel>instruction_0_1774447225797</masterLabel>
+<sortOrder>2</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>Guide users on how to access detailed loan information through their online banking portal if applicable.</description>
+<developerName>instruction_1_1774447225804</developerName>
+<language xsi:nil="true"/>
+<masterLabel>instruction_1_1774447225804</masterLabel>
+<sortOrder>3</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>If the user&apos;s request cannot be fulfilled, suggest escalating the issue to a live agent or creating a support ticket.</description>
+<developerName>instruction_2_1774447225804</developerName>
+<language xsi:nil="true"/>
+<masterLabel>instruction_2_1774447225804</masterLabel>
+<sortOrder>4</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>Attempt to locate the user&apos;s loan account using the email address retrieved from the current session. If the session returns no user details (the &apos;Not Logged&apos; path in the flow), proactively ask the user to provide the email address associated with their loan account to proceed.</description>
+<developerName>instruction_3_1774447225804</developerName>
+<language xsi:nil="true"/>
+<masterLabel>instruction_3_1774447225804</masterLabel>
+<sortOrder>5</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>If the user is already logged in, do not request an email address according to the request email for check remaining balance</description>
+<developerName>instruction_4_1774447225804</developerName>
+<language xsi:nil="true"/>
+<masterLabel>instruction_4_1774447225804</masterLabel>
+<sortOrder>6</sortOrder>
+</genAiPluginInstructions>
+<genAiPluginInstructions>
+<description>If the user is logged in, do not ask for their email, give the user their loan balance associated with the login session.</description>
+<developerName>instructions_0_1775640254928</developerName>
+<language>en_US</language>
+<masterLabel>instructions_0_1775640254928</masterLabel>
+<sortOrder>7</sortOrder>
+</genAiPluginInstructions>
+<language>en_US</language>
+<localDeveloperName>Loan_Remaining_Balance_Topic</localDeveloperName>
+<masterLabel>Loan Remaining Balance Topic</masterLabel>
+<pluginType>Topic</pluginType>
+<scope>Your job is only to assist users with questions about their existing loan accounts, such as providing information on remaining balances, payment schedules, or other related inquiries. Do not address topics unrelated to loan accounts.</scope>
+<source>Loan_Remaining_Balance_Topic</source>
+</localTopics>
+ 
+    <masterLabel>Loan Status Agent</masterLabel>
+ 
+    <plannerActions>
+<fullName>AnswerQuestionsWithKnowledge_16jd30000001nxx</fullName>
+<description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+<developerName>AnswerQuestionsWithKnowledge_16jd30000001nxx</developerName>
+<invocationTarget>streamKnowledgeSearch</invocationTarget>
+<invocationTargetType>standardInvocableAction</invocationTargetType>
+<isConfirmationRequired>false</isConfirmationRequired>
+<isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+<localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+<masterLabel>Answer Questions with Knowledge</masterLabel>
+<progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+<source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+</plannerActions>
+ 
+    <plannerSurfaces>
+<adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+<callRecordingAllowed>false</callRecordingAllowed>
+<surface>SurfaceAction__Messaging</surface>
+<surfaceType>Messaging</surfaceType>
+</plannerSurfaces>
+<plannerSurfaces>
+<adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+<callRecordingAllowed>false</callRecordingAllowed>
+<surface>SurfaceAction__CustomerWebClient</surface>
+<surfaceType>CustomerWebClient</surfaceType>
+</plannerSurfaces>
+ 
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlannerBundle>
+ 

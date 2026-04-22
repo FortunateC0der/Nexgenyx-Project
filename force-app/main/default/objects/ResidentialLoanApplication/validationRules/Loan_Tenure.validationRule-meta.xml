@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loan_Tenure</fullName>
+    <active>true</active>
+    <errorConditionFormula>AmortizationTerm &gt; 360</errorConditionFormula>
+    <errorDisplayField>AmortizationTerm</errorDisplayField>
+    <errorMessage>Loan Tenure cannot exceed 30 years</errorMessage>
+</ValidationRule>

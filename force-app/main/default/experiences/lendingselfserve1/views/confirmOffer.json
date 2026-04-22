@@ -1,0 +1,35 @@
+{
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "9a738a7f-055b-4b20-8221-993110c6d446",
+  "label" : "Confirm Offer",
+  "regions" : [ {
+    "id" : "982728ff-92cd-45fb-abe1-e25c2f9d7cb7",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "flexcardName" : "DigitalLendingConfirmOffer",
+        "objectApiName" : "{!objectApiName}",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "runtime_omnistudio:flexcard",
+      "id" : "d2838358-f428-4844-81bb-e5a68b02e5b1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ca5f6126-036f-49a3-9c5c-5068cc5c9b6f",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "1e371e1a-2758-4c07-a3b2-7a86494d50ec",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "confirm-offer"
+}

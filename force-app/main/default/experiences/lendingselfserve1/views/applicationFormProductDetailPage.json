@@ -1,0 +1,65 @@
+{
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "dataProviders" : [ ],
+  "id" : "27b4a0ea-c714-4780-a16f-0beefb13dd5d",
+  "label" : "Application Form Product Detail Page",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1><span style=\"color: #2D2D2D;font-size: 18px;\"> Product Details </span>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "05784839-4e2c-4203-8199-38c0cecad123",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f437999c-e299-4b64-95f2-c596126425ba",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "flexcardName" : "DigitalLendingApplicationFormProductDetails",
+        "objectApiName" : "{!objectApiName}",
+        "recordId" : "{!c__ContextId}"
+      },
+      "componentName" : "runtime_omnistudio:flexcard",
+      "id" : "e62477a5-df0a-4cbc-bfc8-4de1d63bfcc9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "436df7e5-7f24-4baf-b135-c98bee07f34b",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "componentLabel" : "Work Guide",
+        "isHiddenWhenEmpty" : false,
+        "isRunNameDisplayed" : true,
+        "isStageNameDisplayed" : true,
+        "isStepNameDisplayed" : true,
+        "prioritizationCriteria" : "Last Modified Date (Ascending)",
+        "recordId" : "{!c__ContextId}"
+      },
+      "componentName" : "interaction_orchestrator:workGuide",
+      "id" : "29975b53-aae6-4f85-a1a0-2a3a81660cbc",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "dd52ae4c-89e2-42b0-bf34-8ebabf31296b",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "72d3b9a7-8e8e-4233-8d8e-129883b94901",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "ApplicationFormProduct"
+}

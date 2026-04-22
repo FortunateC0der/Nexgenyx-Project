@@ -1,0 +1,119 @@
+<template>
+    <lightning-card title="EMI Calculator">
+        <div class="container">
+            <div class="left-panel">
+                <lightning-combobox
+                    label="Repayment Type"
+                    value={repaymentType}
+                    options={repaymentOptions}
+                    onchange={handleTypeChange}>
+                </lightning-combobox>
+
+                <lightning-input
+                    label="Loan Amount"
+                    type="number"
+                    step="0.01"
+                    value={loanAmount}
+                    data-field="loanAmount"
+                    oninput={handleChange}
+                    required>
+                </lightning-input>
+
+                <lightning-combobox
+                    label="Loan Term (Months)"
+                    value={loanTerm}
+                    options={loanTermOptions}
+                    data-field="loanTerm"
+                    onchange={handleChange}
+                    required>
+                </lightning-combobox>
+
+                <lightning-input
+                    label="Interest Rate (%)"
+                    type="number"
+                    step="0.01"
+                    value={interestRate}
+                    data-field="interestRate"
+                    oninput={handleChange}
+                    required>
+                </lightning-input>
+
+                <div class="date-field">
+                    <lightning-input
+                        label="Start Date"
+                        type="date"
+                        value={startDate}
+                        data-field="startDate"
+                        onchange={handleChange}
+                        required>
+                    </lightning-input>
+                </div>
+
+                <template if:true={isBalloon}>
+                    <lightning-input
+                        label="Balloon Payment (Final)"
+                        type="number"
+                        step="0.01"
+                        value={balloonAmount}
+                        data-field="balloonAmount"
+                        oninput={handleChange}>
+                    </lightning-input>
+                </template>
+
+                <template if:true={isStep}>
+                    <lightning-combobox
+                        label="Increment Interval (Months)"
+                        value={interval}
+                        options={intervalOptions}
+                        data-field="interval"
+                        onchange={handleChange}>
+                    </lightning-combobox>
+
+                    <lightning-input
+                        label="Change Amount"
+                        type="number"
+                        step="0.01"
+                        value={stepAmount}
+                        data-field="stepAmount"
+                        oninput={handleChange}>
+                    </lightning-input>
+                </template>
+
+                <div class="btn-container">
+                    <lightning-button
+                        label="Calculate"
+                        variant="brand"
+                        onclick={calculate}>
+                    </lightning-button>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="result-card">
+                    <p class="label">Monthly Payment</p>
+                    <p class="value">{monthlyPayment}</p>
+                </div>
+
+                <div class="result-card">
+                    <p class="label">Total Payment</p>
+                    <p class="value">{totalPayment}</p>
+                </div>
+
+                <div class="result-card">
+                    <p class="label">Total Interest</p>
+                    <p class="value">{totalInterest}</p>
+                </div>
+
+                <div class="maturity">
+                    Maturity Date: {maturityDate}
+                </div>
+            </div>
+        </div>
+
+        <lightning-datatable
+            key-field="month"
+            data={schedule}
+            columns={columns}>
+        </lightning-datatable>
+    </lightning-card>
+</template>

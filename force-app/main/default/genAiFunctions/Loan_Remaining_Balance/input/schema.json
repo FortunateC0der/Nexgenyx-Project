@@ -1,0 +1,14 @@
+{
+  "required" : [ "userInput" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "userInput" : {
+      "title" : "userInput",
+      "description" : "Pass the Account ID or Residential Loan Account ID associated with the current user to this input.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

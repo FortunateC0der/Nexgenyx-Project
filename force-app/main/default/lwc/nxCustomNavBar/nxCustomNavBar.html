@@ -1,0 +1,49 @@
+<template>
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="nav-links">
+                <a onclick={goHome}>Home</a>
+                <a onclick={goProducts}>Loan Products</a>
+
+                <template if:false={isGuestUser}>
+                    <a onclick={goMyLoans}>My Loans</a>
+                    <a onclick={goProfile}>Profile</a>
+                </template>
+            </div>
+
+            <div class="nav-actions">
+                <template if:true={isGuestUser}>
+                    <button class="btn btn-secondary" onclick={goLogin}>Sign In</button>
+                    <button class="btn btn-primary" onclick={goRegister}>Sign Up</button>
+                </template>
+
+                <template if:false={isGuestUser}>
+                    <button class="btn btn-dark" onclick={handleLogout}>Logout</button>
+                </template>
+            </div>
+
+            <button class="mobile-toggle" onclick={toggleMenu} aria-label="Toggle navigation">
+                ☰
+            </button>
+        </div>
+
+        <template if:true={menuOpen}>
+            <div class="mobile-menu">
+                <a onclick={goHome}>Home</a>
+                <a onclick={goProducts}>Loan Products</a>
+
+                <template if:true={isGuestUser}>
+                    <a onclick={goLogin}>Sign In</a>
+                    <a onclick={goRegister}>Sign Up</a>
+                </template>
+
+                <template if:false={isGuestUser}>
+                    <a onclick={goMyLoans}>My Loans</a>
+                    <a onclick={goProfile}>Profile</a>
+                    <a onclick={handleLogout}>Logout</a>
+                </template>
+            </div>
+        </template>
+    </nav>
+</template>

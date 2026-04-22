@@ -1,0 +1,116 @@
+<template>
+    <section class="profile-page">
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="eyebrow">Borrower Portal</p>
+                <h1>My Profile</h1>
+                <p class="hero-text">
+                    Manage your personal details and keep your borrower information up to date.
+                </p>
+            </div>
+        </div>
+
+        <div class="profile-wrap">
+            <template if:true={isLoading}>
+                <div class="state-card">
+                    <lightning-spinner alternative-text="Loading profile" size="medium"></lightning-spinner>
+                    <p class="state-text">Loading your profile...</p>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+
+                <template if:true={hasError}>
+                    <div class="state-card error-card">
+                        <h2>We could not load your profile</h2>
+                        <p>{errorMessage}</p>
+                    </div>
+                </template>
+
+                <template if:false={hasError}>
+                    <div class="profile-layout">
+                        <aside class="profile-summary">
+                            <div class="avatar">{initials}</div>
+                            <h2>{fullName}</h2>
+                            <p class="customer-id">Customer ID: {customerId}</p>
+
+                            <div class="summary-item">
+                                <span class="label">Email</span>
+                                <span class="value">{emailDisplay}</span>
+                            </div>
+
+                            <div class="summary-item">
+                                <span class="label">Phone</span>
+                                <span class="value">{phoneDisplay}</span>
+                            </div>
+
+                            <div class="summary-item">
+                                <span class="label">Status</span>
+                                <span class="value active">{statusDisplay}</span>
+                            </div>
+                        </aside>
+
+                        <div class="profile-main">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h2>Personal Information</h2>
+                                        <p>These details are being pulled from your Salesforce customer profile.</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid">
+                                    <lightning-input label="First Name" value={firstName} disabled></lightning-input>
+                                    <lightning-input label="Last Name" value={lastName} disabled></lightning-input>
+                                    <lightning-input type="email" label="Email Address" value={email} disabled></lightning-input>
+                                    <lightning-input type="tel" label="Phone Number" value={phone} disabled></lightning-input>
+                                    <lightning-input label="ID / Passport Number" value={idNumber} disabled></lightning-input>
+                                    <lightning-input type="date" label="Date of Birth" value={dateOfBirth} disabled></lightning-input>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h2>Address Information</h2>
+                                        <p>Your current residential address stored in the org.</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid">
+                                    <lightning-input label="Street Address" value={street} disabled></lightning-input>
+                                    <lightning-input label="Suburb" value={suburb} disabled></lightning-input>
+                                    <lightning-input label="City" value={city} disabled></lightning-input>
+                                    <lightning-input label="Province" value={province} disabled></lightning-input>
+                                    <lightning-input label="Postal Code" value={postalCode} disabled></lightning-input>
+                                    <lightning-input label="Country" value={country} disabled></lightning-input>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h2>Employment Information</h2>
+                                        <p>Your employment details currently stored against your customer profile.</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid">
+                                    <lightning-input label="Employment Type" value={employmentType} disabled></lightning-input>
+                                    <lightning-input label="Employer Name" value={employerName} disabled></lightning-input>
+                                    <lightning-input label="Job Title" value={jobTitle} disabled></lightning-input>
+                                    <lightning-input type="number" label="Work Experience (Years)" value={workExperienceYears} disabled></lightning-input>
+                                </div>
+                            </div>
+
+                            <div class="actions">
+                                <a href="/nexgenyxbank/my-loans" class="secondary-btn">Back to Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </section>
+</template>

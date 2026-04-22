@@ -1,0 +1,28 @@
+{
+  "required" : [ "customerUserId", "varApplicationName", "varEmail" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "customerUserId" : {
+      "title" : "customerUserId",
+      "description" : "Unique identifier for the logged-in customer. Used when the flow detects the user is authenticated.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varApplicationName" : {
+      "title" : "varApplicationName",
+      "description" : "The name of the loan application being queried.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varEmail" : {
+      "title" : "varEmail",
+      "description" : " Customer’s registered email address used for loan application tracking.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

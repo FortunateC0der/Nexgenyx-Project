@@ -1,0 +1,21 @@
+{
+  "required" : [ "varEmail" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varApplicationName" : {
+      "title" : "varApplicationName",
+      "description" : "The name of the loan application selected by the user when multiple loan applications are found. Collect this from the user only after the action presents more than one matching application and asks the user to choose one.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varEmail" : {
+      "title" : "varEmail",
+      "description" : "The customer’s registered email address. Collect this from the user only when the customer cannot be identified from authenticated session context or when the action needs the email address to locate the customer’s loan application.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

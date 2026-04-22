@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "9a738a7f-055b-4b20-8221-993110c6d446",
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "configurationTags" : [ ],
+  "devName" : "ConfirmOffer",
+  "id" : "ec12628d-cc11-40e0-9cfb-52e3a7d56205",
+  "label" : "Confirm Offer",
+  "routeType" : "confirm-offer",
+  "type" : "route",
+  "urlPrefix" : "confirm-offer"
+}

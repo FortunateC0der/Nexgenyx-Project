@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic is selected when customers seek guidance on meeting the eligibility criteria for loan approval.</description>
+    <developerName>p_16jd30000001npt_Eligibility_Criteria_Assistance</developerName>
+    <genAiFunctions>
+        <functionName>lendProdtDcvr__RetrieveLoanProductCategories</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the query is about loan eligibility requirements, use the lendProdtDcvr__RetrieveLoanProductCategories action.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>p_16jd30000001npt_Eligibility_Criteria_Assistance</localDeveloperName>
+    <masterLabel>Eligibility Criteria Assistance</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only assist customers by providing information on the eligibility criteria for loan approval. You are not able to determine or guarantee eligibility outcomes.</scope>
+</GenAiPlugin>

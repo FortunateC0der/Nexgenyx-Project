@@ -1,0 +1,128 @@
+{
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "06207150-47f3-447c-88fd-7ed17e96dd6e",
+  "label" : "Application Summary Page",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1><span style=\"color: #2D2D2D;font-size: 18px;\">Application Details - {!c__ApplicationFormName}</span>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "a55725e0-f1a6-4191-bf4a-08bd1bcc6b32",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9600767b-2d7c-472d-adc7-37dd727215e3",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "bae8ad44-c5f1-44f5-96f6-bf0fde9fbf49",
+          "activeTab" : "tab1",
+          "tabs" : [ {
+            "UUID" : "6c69d74d-a9a2-4496-938b-a8a8f0a0240f",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : {
+                "language" : "Multi-Language",
+                "sfdc:identifier" : "omniscript_industriesdigitallending",
+                "subType" : "ApplicantPostIntake",
+                "theme" : "lightning",
+                "type" : "DigitalLending"
+              },
+              "fqn" : "runtime_omnistudio:omniscript"
+            } ],
+            "tabKey" : "tab1",
+            "tabName" : "{!$Label.ApplicationDetailTabsetLabel.ApplicationSummaryDetail}"
+          }, {
+            "UUID" : "d0f10b88-3a67-4e5d-a56b-921cfde1ec1e",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : {
+                "customTitle" : "{!$Label.ApplicationProductsLabel.ApplicationProducts}",
+                "parentRecordId" : "{!c__ContextId}",
+                "previewMode" : "true",
+                "relatedListName" : "ApplicationFormProducts",
+                "showBreadCrumbs" : "false",
+                "showCustomTitle" : "true",
+                "showManualRefreshButton" : "false",
+                "showRowNumbers" : "false"
+              },
+              "fqn" : "forceCommunity:relatedList"
+            } ],
+            "tabKey" : "tab2",
+            "tabName" : "{!$Label.ApplicationDetailTabsetLabel.ApplicationSummaryRelated}"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabLayout",
+      "id" : "bae8ad44-c5f1-44f5-96f6-bf0fde9fbf49",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "direction" : "ltr",
+            "display" : "Display OmniScript on page",
+            "inlineVariant" : "brand",
+            "language" : "Multi-Language",
+            "subType" : "ApplicantPostIntake",
+            "theme" : "lightning",
+            "type" : "DigitalLending"
+          },
+          "componentName" : "runtime_omnistudio:omniscript",
+          "id" : "4983551d-30e3-4aed-b2f5-96180ffe1fe8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6c69d74d-a9a2-4496-938b-a8a8f0a0240f",
+        "regionLabel" : "{!$Label.ApplicationDetailTabsetLabel.ApplicationSummaryDetail}",
+        "regionName" : "tab1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "customTitle" : "{!$Label.ApplicationProductsLabel.ApplicationProducts}",
+            "parentRecordId" : "{!c__ContextId}",
+            "relatedListName" : "ApplicationFormProducts",
+            "showBreadCrumbs" : false,
+            "showCustomTitle" : true,
+            "showManualRefreshButton" : false,
+            "showRowNumbers" : false
+          },
+          "componentName" : "forceCommunity:relatedList",
+          "id" : "956ce15f-97f2-417a-84eb-62caa70a09c4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d0f10b88-3a67-4e5d-a56b-921cfde1ec1e",
+        "regionLabel" : "{!$Label.ApplicationDetailTabsetLabel.ApplicationSummaryRelated}",
+        "regionName" : "tab2",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d03327a2-2951-424d-af74-6bf1693a4376",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "5bfb5eb2-096e-42c8-88cb-740b54e3544a",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "application-summary"
+}

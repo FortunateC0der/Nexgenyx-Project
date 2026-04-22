@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "27b4a0ea-c714-4780-a16f-0beefb13dd5d",
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "configurationTags" : [ ],
+  "devName" : "Application_Form_Product",
+  "id" : "b62dbe20-318d-42a4-a35c-4fb48c41a6e1",
+  "label" : "Application Form Product Detail Page",
+  "routeType" : "ApplicationFormProduct",
+  "type" : "route",
+  "urlPrefix" : "application-form-product"
+}

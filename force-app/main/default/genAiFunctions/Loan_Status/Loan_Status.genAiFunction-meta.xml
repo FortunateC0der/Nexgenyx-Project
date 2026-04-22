@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Retrieves the current status of a customer’s loan application. The flow uses loan_status to determine whether the user is logged in.
+
+If logged in: use customerUserId to detect the user and provide loan status.
+
+If not logged in: request the customer’s email address to identify and return loan status.</description>
+    <developerName>Loan_Status</developerName>
+    <invocationTarget>Loan_Status</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Loan_Status</localDeveloperName>
+    <masterLabel>Loan Status</masterLabel>
+    <progressIndicatorMessage>Retrieving loan status...</progressIndicatorMessage>
+</GenAiFunction>

@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "123f7cb5-621a-4361-94e7-09d68dfbf47f",
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "configurationTags" : [ ],
+  "devName" : "PDP",
+  "id" : "7bc8a123-e267-4f68-bfa8-5a14d5192c2f",
+  "label" : "Product Detail Page",
+  "routeType" : "pdp",
+  "type" : "route",
+  "urlPrefix" : "pdp"
+}

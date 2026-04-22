@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedOutputJson>{
+  &quot;omniscriptId&quot; : &quot;0jNd30000003J4XEAU&quot;,
+  &quot;language&quot; : &quot;English&quot;,
+  &quot;type&quot; : &quot;Loan&quot;,
+  &quot;subType&quot; : &quot;Application&quot;,
+  &quot;sId&quot; : &quot;0jNd30000003J4XEAU&quot;,
+  &quot;runMode&quot; : &quot;preview&quot;,
+  &quot;theme&quot; : &quot;lightning&quot;,
+  &quot;LanguageCode&quot; : &quot;en_US&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;timeStamp&quot; : &quot;2026-04-09T17:37:22.053Z&quot;,
+  &quot;userTimeZoneName&quot; : &quot;Africa/Johannesburg&quot;,
+  &quot;userTimeZone&quot; : &quot;120&quot;,
+  &quot;userCurrencyCode&quot; : &quot;ZAR&quot;,
+  &quot;userName&quot; : &quot;basetsanaramahlo_y3dfrzh608bof2us@gmail.com&quot;,
+  &quot;userId&quot; : &quot;005d3000002ZAbFAAW&quot;,
+  &quot;omniProcessId&quot; : &quot;0jNd30000003J4XEAU&quot;,
+  &quot;localTimeZoneName&quot; : &quot;Africa/Johannesburg&quot;,
+  &quot;personalDetails&quot; : {
+    &quot;firstName&quot; : null,
+    &quot;lastName&quot; : null,
+    &quot;emailAddress&quot; : &quot;youngatlas66@proton.me&quot;,
+    &quot;dateofBirth&quot; : &quot;2026-04-09&quot;,
+    &quot;gender&quot; : &quot;Male&quot;,
+    &quot;panNumber&quot; : 86787678,
+    &quot;mobileNumber&quot; : 809890980
+  }
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>CustomerAccInfo</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>6b63cb2e-2f26-4c4a-8a7b-45ad0aec2afa</globalKey>
+        <inputFieldName>CustomerAccount:PersonGender</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CustomerAccInfo</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>personalDetails:gender</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>5f021a56-340c-4cef-8992-b397e2b1ef9a</globalKey>
+        <inputFieldName>CustomerAccount:FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CustomerAccInfo</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>personalDetails:firstName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>bba52528-aa28-4b1b-840f-9d7a8b935cff</globalKey>
+        <inputFieldName>CustomerAccount:PersonEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CustomerAccInfo</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>personalDetails:emailAddress</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>eeebd0cf-b9c3-4068-8761-61a6ebd013ae</globalKey>
+        <inputFieldName>CustomerAccount:PAN_Number__c</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CustomerAccInfo</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>personalDetails:panNumber</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>8466a1ba-7448-4aa5-b53e-dffae58b9c39</globalKey>
+        <inputFieldName>CustomerAccount:PersonBirthdate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CustomerAccInfo</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>personalDetails:dateofBirth</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>CurrentUser:AccountId</filterValue>
+        <globalKey>f96cd34c-05d0-43f5-90e3-003d2933b8d0</globalKey>
+        <inputFieldName>Id</inputFieldName>
+        <inputObjectName>Account</inputObjectName>
+        <inputObjectQuerySequence>2.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CustomerAccInfo</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>CustomerAccount</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>vlcUser</filterValue>
+        <globalKey>66f61d09-18ed-4b60-81a8-4827e408cb08</globalKey>
+        <inputFieldName>Id</inputFieldName>
+        <inputObjectName>User</inputObjectName>
+        <inputObjectQuerySequence>1.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CustomerAccInfo</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>CurrentUser</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>3fa63161-7174-41bc-8ec4-937c72562d28</globalKey>
+        <inputFieldName>CustomerAccount:LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CustomerAccInfo</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>personalDetails:lastName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>6f99f6fa-ff0d-4bbb-b23b-a0a740b0a01e</globalKey>
+        <inputFieldName>CustomerAccount:Phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CustomerAccInfo</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>personalDetails:mobileNumber</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>0abf6f2b-559a-4fee-8fa5-64cc3d91f14d</globalKey>
+        <inputFieldName>CustomerAccount:Id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CustomerAccInfo</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>accId</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;vlcUser&quot; : &quot;005d3000002j8RhAAI&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Extract</type>
+    <uniqueName>CustomerAccInfo_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

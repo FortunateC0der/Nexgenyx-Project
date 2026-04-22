@@ -1,0 +1,33 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "noapplications" : {
+      "title" : "noapplications",
+      "description" : "A user-facing message indicating that no loan applications were found for the identified customer after a valid lookup using authenticated session context or the email address provided by the user.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "resultMessage" : {
+      "title" : "resultMessage",
+      "description" : "A user-facing message returned by the flow. This output is used for general responses such as requesting the customer’s email address, presenting multiple matching applications, or informing the user that no applications were found.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "singleApplicationStatus" : {
+      "title" : "singleApplicationStatus",
+      "description" : "The user-facing status message for a single loan application. This output is returned when exactly one application is found or when the user selects a specific application from multiple results, and it should be shown directly to the user.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,91 @@
+<template>
+    <section class="apply-page">
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="eyebrow">NexGenyx Bank</p>
+                <h1>Start Your Loan Application</h1>
+                <p class="hero-text">
+                    Complete your application in a few simple steps with a secure and guided digital experience.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-wrap">
+            <div class="progress-card">
+                <div class="progress-step active">
+                    <span>1</span>
+                    <p>Personal</p>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <span>2</span>
+                    <p>Financial</p>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <span>3</span>
+                    <p>Loan Details</p>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <span>4</span>
+                    <p>Review</p>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <div class="section-heading">
+                    <h2>Application Details</h2>
+                    <p>Please fill in the information below to begin.</p>
+                </div>
+
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <div class="form-grid">
+                        <lightning-input label="First Name"></lightning-input>
+                        <lightning-input label="Last Name"></lightning-input>
+                        <lightning-input type="email" label="Email Address"></lightning-input>
+                        <lightning-input type="tel" label="Phone Number"></lightning-input>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Financial Information</h3>
+                    <div class="form-grid">
+                        <lightning-input type="number" label="Monthly Income"></lightning-input>
+                        <lightning-input type="number" label="Existing Monthly EMIs"></lightning-input>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Loan Information</h3>
+                    <div class="form-grid">
+                        <lightning-combobox
+                            label="Loan Type"
+                            placeholder="Select Loan Type"
+                            options={loanTypeOptions}>
+                        </lightning-combobox>
+
+                        <lightning-input type="number" label="Loan Amount"></lightning-input>
+                        <lightning-input type="number" label="Loan Tenure (Months)"></lightning-input>
+                        <lightning-combobox
+                            label="Interest Type"
+                            placeholder="Select Interest Type"
+                            options={interestTypeOptions}>
+                        </lightning-combobox>
+                    </div>
+                </div>
+
+                <div class="info-banner">
+                    Your application will be reviewed securely and you’ll be able to track progress from your borrower dashboard.
+                </div>
+
+                <div class="actions">
+                    <button class="btn-secondary">Save for Later</button>
+                    <button class="btn-primary">Continue</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

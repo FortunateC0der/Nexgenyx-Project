@@ -1,0 +1,38 @@
+<template>
+    <div class="wrapper">
+        <div class="card">
+
+            <template if:false={isLoggedIn}>
+                <h1>Welcome Back</h1>
+                <p class="subtitle">Login to your NexGenyx account</p>
+
+                <lightning-input 
+                    label="Email" 
+                    type="email"
+                    onchange={handleEmail}>
+                </lightning-input>
+
+                <lightning-input 
+                    label="Password" 
+                    type="password"
+                    onchange={handlePassword}>
+                </lightning-input>
+
+                <lightning-button 
+                    label="Login" 
+                    variant="brand" 
+                    class="btn"
+                    onclick={handleLogin}>
+                </lightning-button>
+            </template>
+
+          <template if:true={isLoggedIn}>
+                <h1>Welcome 👋</h1>
+                <p class="subtitle">
+                    Logged in as: <strong>{accountName}</strong>
+                </p>
+            </template>
+
+        </div>
+    </div>
+</template>

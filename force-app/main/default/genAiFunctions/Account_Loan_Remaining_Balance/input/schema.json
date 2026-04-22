@@ -1,0 +1,14 @@
+{
+  "required" : [ "varEmail" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varEmail" : {
+      "title" : "varEmail",
+      "description" : "The email address associated with the user's loan account. Attempt to retrieve this automatically from the authenticated session. If the user is not logged in or the value is missing, ask the user to provide their account email.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

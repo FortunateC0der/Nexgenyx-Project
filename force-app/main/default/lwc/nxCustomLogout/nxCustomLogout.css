@@ -1,0 +1,15 @@
+.logout-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.logout-btn {
+    --slds-c-button-brand-color-background: #2ecc71;
+    --slds-c-button-brand-color-border: #2ecc71;
+    --slds-c-button-brand-color-background-hover: #27ae60;
+    --slds-c-button-brand-color-border-hover: #27ae60;
+
+    border-radius: 8px;
+    font-weight: 600;
+}

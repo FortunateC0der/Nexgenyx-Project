@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Sends a generated verification code to the users email address</description>
+    <developerName>Authentication_Flow</developerName>
+    <invocationTarget>Authentication_Flow</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Authentication_Flow</localDeveloperName>
+    <masterLabel>Authentication Flow</masterLabel>
+</GenAiFunction>

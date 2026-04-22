@@ -1,0 +1,39 @@
+{
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "39196c79-9fdf-424c-b5f4-5753283f7100",
+  "label" : "Intake Application Form",
+  "regions" : [ {
+    "id" : "be64baee-70fc-41d5-a6a6-2326bbd9b050",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "direction" : "ltr",
+        "display" : "Display OmniScript on page",
+        "inlineVariant" : "brand",
+        "language" : "Multi-Language",
+        "subType" : "{!omniScriptName}",
+        "theme" : "lightning",
+        "type" : "DigitalLending"
+      },
+      "componentName" : "runtime_omnistudio:omniscript",
+      "id" : "7a4e5625-2d48-421c-bba5-ec2f55e6f4e9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "484460ce-e4cd-4787-89f3-29f599767f3c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "de26031f-043a-4b94-afe2-6cb7fa4aa61a",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "application-form"
+}

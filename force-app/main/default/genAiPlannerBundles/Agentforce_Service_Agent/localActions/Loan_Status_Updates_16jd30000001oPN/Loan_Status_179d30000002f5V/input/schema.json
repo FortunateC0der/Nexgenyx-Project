@@ -1,0 +1,14 @@
+{
+  "required" : [ "varGetLoanName" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varGetLoanName" : {
+      "title" : "varGetLoanName",
+      "description" : "Extract the loan application name from the user's request and pass it to the flow.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Effective_Date_c__c</fullName>
+    <description>When this rate came into effect</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Effective_Date__c</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

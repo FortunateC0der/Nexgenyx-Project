@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "40d271e2-4ba9-49cf-9616-c2f9bb6bab15",
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "configurationTags" : [ ],
+  "devName" : "Application_Rejection",
+  "id" : "468ee531-b21d-4e1a-b6d6-5ed4ffba7913",
+  "label" : "Application Rejection Page",
+  "routeType" : "application-rejection",
+  "type" : "route",
+  "urlPrefix" : "application-rejection"
+}

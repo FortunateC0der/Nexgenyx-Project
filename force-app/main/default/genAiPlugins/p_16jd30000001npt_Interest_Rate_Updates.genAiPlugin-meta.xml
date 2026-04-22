@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic is selected when customers inquire about updates or changes in loan interest rates.</description>
+    <developerName>p_16jd30000001npt_Interest_Rate_Updates</developerName>
+    <genAiFunctions>
+        <functionName>lendProdtDcvr__RetrieveProductDetails</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the query is about interest rate updates, use the lendProdtDcvr__RetrieveProductDetails action to provide the relevant information.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>p_16jd30000001npt_Interest_Rate_Updates</localDeveloperName>
+    <masterLabel>Interest Rate Updates</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only notify customers about changes in interest rates for available loan products. You are not able to provide personalized loan calculations or financial advice.</scope>
+</GenAiPlugin>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Handles inquiries related to existing loan accounts, including remaining balances and down payment schedules.</description>
+    <developerName>Loan_Remaining_Balance_Topic</developerName>
+    <genAiFunctions>
+        <functionName>Loan_Remaining_Balance</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If a user asks about their loan balance, provide the remaining balance based on the account details.</description>
+        <developerName>instruction_0_1774447225797</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1774447225797</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When a user inquires about down payment and Loan Amount.</description>
+        <developerName>instruction_1_1774447225804</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1_1774447225804</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the user does not have their loan account details, ask for identifying information to locate the account.</description>
+        <developerName>instruction_2_1774447225804</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_2_1774447225804</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Guide users on how to access detailed loan information through their online banking portal if applicable.</description>
+        <developerName>instruction_3_1774447225804</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_3_1774447225804</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the user&apos;s request cannot be fulfilled, suggest escalating the issue to a live agent or creating a support ticket.</description>
+        <developerName>instruction_4_1774447225804</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_4_1774447225804</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>Loan_Remaining_Balance_Topic</localDeveloperName>
+    <masterLabel>Loan Remaining Balance Topic</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to assist users with questions about their existing loan accounts, such as providing information on remaining balances, payment schedules, or other related inquiries. Do not address topics unrelated to loan accounts.</scope>
+</GenAiPlugin>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_Be_18_Years_Old</fullName>
+    <active>true</active>
+    <errorConditionFormula>PersonBirthdate &gt; DATE (YEAR (TODAY ()) - 18, MONTH (TODAY ()), DAY (TODAY ()))</errorConditionFormula>
+    <errorDisplayField>PersonBirthdate</errorDisplayField>
+    <errorMessage>User must be at least 18 years old.</errorMessage>
+</ValidationRule>

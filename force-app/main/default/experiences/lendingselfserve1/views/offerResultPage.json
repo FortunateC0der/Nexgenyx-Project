@@ -1,0 +1,50 @@
+{
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "725a0d66-8536-4889-b84c-3beb4338f857",
+  "label" : "Offer Result Page",
+  "regions" : [ {
+    "id" : "24161402-da28-4d0f-a867-bc06dafba8c4",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "flexcardName" : "DigitalLendingOfferResult",
+        "objectApiName" : "{!objectApiName}",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "runtime_omnistudio:flexcard",
+      "id" : "df6fc5a2-f5c8-4b90-9d67-f1737b07b601",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "216b3910-bedc-466a-9ec0-cb0583a0c279",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "2d48f005-5c29-45ce-892a-a6611ef4fe63",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Offer Result Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "3eb35700-8322-4234-9910-e3ba1b5dcdd7",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b5ef4c8c-3d2c-476f-b5bd-8b58b4d286bd",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "OfferResult"
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Monthly_Expenses__c</fullName>
+    <description>System-calculated total of all expenses</description>
+    <label>Total Monthly Expenses</label>
+    <summarizedField>LoanApplicant.Monthly_Expenses__c</summarizedField>
+    <summaryForeignKey>LoanApplicant.LoanApplicationId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,139 @@
+{
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "dc400baa-771d-4a3f-a401-2a123d5ef97a",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "2fd71dc9-e7ab-4191-9c6d-53f44fd0925f",
+          "columns" : [ {
+            "UUID" : "b8060fc4-f5f2-4239-a645-0e288dcf88f5",
+            "columnKey" : "col1",
+            "columnName" : "column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ {
+              "attributes" : {
+                "enableInlineEdit" : "false",
+                "filterName" : "All_ApplicationForms",
+                "layout" : "FULL",
+                "pageSize" : "5",
+                "scope" : "ApplicationForm",
+                "sfdc:identifier" : "forceCommunity:objectHome",
+                "showActionBar" : "false",
+                "showChartsPanel" : "false",
+                "showFilterPanel" : "false",
+                "showImageIcon" : "false",
+                "showManualRefreshButton" : "false",
+                "showObjectName" : "false",
+                "showPinnedList" : "false"
+              },
+              "fqn" : "forceCommunity:objectHome"
+            } ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2fd71dc9-e7ab-4191-9c6d-53f44fd0925f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flexcardName" : "DigitalLendingLoanCalculator",
+            "objectApiName" : "{!objectApiName}",
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "runtime_omnistudio:flexcard",
+          "id" : "d7a95efe-0739-4424-b467-944bfed34c47",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "clientVersion" : "WebV1",
+            "deploymentName" : "MIAW_Channel",
+            "hideChatButtonOnLoad" : "Default",
+            "isExpSiteAuthMode" : false,
+            "scrtUrl" : "https://fsc258learnorg.my.salesforce-scrt.com",
+            "siteEndpoint" : "https://fsc258learnorg.my.site.com/ESWMIAWChannel1759656140823"
+          },
+          "componentName" : "experience_messaging:embeddedMessaging",
+          "id" : "7766767f-7596-4497-88b9-cd30d4b1a68f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "clientVersion" : "WebV1",
+            "deploymentName" : "MIAW_Channel",
+            "hideChatButtonOnLoad" : "Visible",
+            "isExpSiteAuthMode" : false,
+            "scrtUrl" : "https://fsc258learnorg.my.salesforce-scrt.com",
+            "siteEndpoint" : "https://fsc258learnorg.my.site.com/ESWMIAWChannel1759656140823"
+          },
+          "componentName" : "experience_messaging:embeddedMessaging",
+          "id" : "8e9a0ba0-8a25-4961-9862-b901894d09f7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "enableInlineEdit" : false,
+            "filterName" : "All_ApplicationForms",
+            "layout" : "FULL",
+            "pageSize" : 5,
+            "scope" : "ApplicationForm",
+            "showActionBar" : false,
+            "showChartsPanel" : false,
+            "showDisplay" : "showall",
+            "showFilterPanel" : false,
+            "showImageIcon" : false,
+            "showManualRefreshButton" : false,
+            "showObjectName" : false,
+            "showPinnedList" : false,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "086c43ec-f52e-47d4-ac40-0d675680bf51",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b8060fc4-f5f2-4239-a645-0e288dcf88f5",
+        "regionLabel" : "column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f7ce4405-9ea1-4d67-99f7-a27f0832ac08",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "98cbb01d-8d70-4e9f-bea7-008447bb2814",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ea43fce6-e9b2-4c0a-b774-a25e83d910e4",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

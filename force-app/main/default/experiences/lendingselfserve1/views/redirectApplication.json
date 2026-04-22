@@ -1,0 +1,39 @@
+{
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "71897bc9-d3d1-4202-8a92-a69147a5178c",
+  "label" : "Redirect Application",
+  "regions" : [ {
+    "id" : "9e72de10-3b85-4187-a618-e160f8f21fd2",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "direction" : "ltr",
+        "display" : "Display OmniScript on page",
+        "inlineVariant" : "brand",
+        "language" : "Multi-Language",
+        "subType" : "RedirectApplication",
+        "theme" : "lightning",
+        "type" : "DigitalLending"
+      },
+      "componentName" : "runtime_omnistudio:omniscript",
+      "id" : "7329d4eb-84d2-44ad-b01e-224aa097c4df",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "35f01862-937a-49ce-bbd4-58c71844a745",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "9f880774-e41b-49a3-86a1-8242e9a0e84f",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "redirect-application"
+}

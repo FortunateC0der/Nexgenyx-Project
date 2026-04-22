@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "06207150-47f3-447c-88fd-7ed17e96dd6e",
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "configurationTags" : [ ],
+  "devName" : "Application_Summary",
+  "id" : "3c447170-ae7b-4c55-b5bf-27ce908d1e42",
+  "label" : "Application Summary Page",
+  "routeType" : "application-summary",
+  "type" : "route",
+  "urlPrefix" : "application-summary"
+}

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;omniscriptId&quot; : &quot;0jNd30000003J4XEAU&quot;,
+  &quot;language&quot; : &quot;English&quot;,
+  &quot;type&quot; : &quot;Loan&quot;,
+  &quot;subType&quot; : &quot;Application&quot;,
+  &quot;sId&quot; : &quot;0jNd30000003J4XEAU&quot;,
+  &quot;runMode&quot; : &quot;preview&quot;,
+  &quot;theme&quot; : &quot;lightning&quot;,
+  &quot;ContextId&quot; : &quot;005d3000002j8RhAAI&quot;,
+  &quot;LanguageCode&quot; : &quot;en_US&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;timeStamp&quot; : &quot;2026-04-09T18:03:38.012Z&quot;,
+  &quot;userTimeZoneName&quot; : &quot;Africa/Johannesburg&quot;,
+  &quot;userTimeZone&quot; : &quot;120&quot;,
+  &quot;userCurrencyCode&quot; : &quot;ZAR&quot;,
+  &quot;userName&quot; : &quot;basetsanaramahlo_y3dfrzh608bof2us@gmail.com&quot;,
+  &quot;userId&quot; : &quot;005d3000002ZAbFAAW&quot;,
+  &quot;omniProcessId&quot; : &quot;0jNd30000003J4XEAU&quot;,
+  &quot;localTimeZoneName&quot; : &quot;Africa/Johannesburg&quot;,
+  &quot;vlcTimeTracking&quot; : {
+    &quot;OmniScriptSessionToken&quot; : &quot;361a0a13-bd6e-4e7e-a451-1d6daa08e62a&quot;,
+    &quot;GetCustomerAccInfo&quot; : 401
+  },
+  &quot;accId&quot; : &quot;001d300000GGx4dAAD&quot;,
+  &quot;personalDetails&quot; : {
+    &quot;dateofBirth&quot; : &quot;2003-04-09&quot;,
+    &quot;panNumber&quot; : 1234567890,
+    &quot;mobileNumber&quot; : 796562253,
+    &quot;gender&quot; : &quot;Male&quot;,
+    &quot;emailAddress&quot; : &quot;tanaka.ryounosuke@gmail.com&quot;,
+    &quot;firstName&quot; : &quot;Tanaka&quot;,
+    &quot;lastName&quot; : &quot;Ryounosuke&quot;
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>updateCustomerAccDetails</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>440f8d9c-7de4-4dda-a2c7-0c216447ee6f</globalKey>
+        <inputFieldName>personalDetails:emailAddress</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>updateCustomerAccDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>PersonEmail</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f9be28e8-067a-4a85-a573-039210486507</globalKey>
+        <inputFieldName>personalDetails:gender</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>updateCustomerAccDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>PersonGender</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9dc9d953-fb50-4a4d-b9ab-12512066e946</globalKey>
+        <inputFieldName>personalDetails:firstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>updateCustomerAccDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FirstName</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>dbf24c1d-7351-41b4-bbaa-ea2dc575f0d9</globalKey>
+        <inputFieldName>personalDetails:panNumber</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>updateCustomerAccDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>PAN_Number__c</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ff965a72-ce22-4b5e-9886-a6bccbd24744</globalKey>
+        <inputFieldName>personalDetails:dateofBirth</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>updateCustomerAccDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>PersonBirthdate</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>d6fe4120-4de8-48b0-9d58-63676dda00c4</globalKey>
+        <inputFieldName>accId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>updateCustomerAccDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>true</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>c0d5cd28-caa0-4da4-bb38-1906fba8446c</globalKey>
+        <inputFieldName>personalDetails:mobileNumber</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>updateCustomerAccDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Phone</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b3352a77-202c-4306-838f-e770193f65c2</globalKey>
+        <inputFieldName>personalDetails:lastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>updateCustomerAccDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LastName</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>385d7858-54fa-4740-ad2a-f3ebfc51d127</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>updateCustomerAccDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;omniscriptId&quot; : &quot;0jNd30000003J4XEAU&quot;,
+  &quot;language&quot; : &quot;English&quot;,
+  &quot;type&quot; : &quot;Loan&quot;,
+  &quot;subType&quot; : &quot;Application&quot;,
+  &quot;sId&quot; : &quot;0jNd30000003J4XEAU&quot;,
+  &quot;runMode&quot; : &quot;preview&quot;,
+  &quot;theme&quot; : &quot;lightning&quot;,
+  &quot;ContextId&quot; : &quot;005d3000002j8RhAAI&quot;,
+  &quot;LanguageCode&quot; : &quot;en_US&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;timeStamp&quot; : &quot;2026-04-09T18:03:38.012Z&quot;,
+  &quot;userTimeZoneName&quot; : &quot;Africa/Johannesburg&quot;,
+  &quot;userTimeZone&quot; : &quot;120&quot;,
+  &quot;userCurrencyCode&quot; : &quot;ZAR&quot;,
+  &quot;userName&quot; : &quot;basetsanaramahlo_y3dfrzh608bof2us@gmail.com&quot;,
+  &quot;userId&quot; : &quot;005d3000002ZAbFAAW&quot;,
+  &quot;omniProcessId&quot; : &quot;0jNd30000003J4XEAU&quot;,
+  &quot;localTimeZoneName&quot; : &quot;Africa/Johannesburg&quot;,
+  &quot;vlcTimeTracking&quot; : {
+    &quot;OmniScriptSessionToken&quot; : &quot;361a0a13-bd6e-4e7e-a451-1d6daa08e62a&quot;,
+    &quot;GetCustomerAccInfo&quot; : 401
+  },
+  &quot;accId&quot; : &quot;001d300000GGx4dAAD&quot;,
+  &quot;personalDetails&quot; : {
+    &quot;dateofBirth&quot; : &quot;2003-04-09&quot;,
+    &quot;panNumber&quot; : 1234567891,
+    &quot;mobileNumber&quot; : 796562253,
+    &quot;gender&quot; : &quot;Male&quot;,
+    &quot;emailAddress&quot; : &quot;tanaka.ryounosuke@gmail.com&quot;,
+    &quot;firstName&quot; : &quot;Tanaka&quot;,
+    &quot;lastName&quot; : &quot;Ryounosuke&quot;
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>updateCustomerAccDetails_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

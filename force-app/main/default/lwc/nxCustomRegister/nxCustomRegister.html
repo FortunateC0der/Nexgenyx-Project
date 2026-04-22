@@ -1,0 +1,55 @@
+<template>
+    <div class="wrapper">
+        <div class="card">
+            <h1>Create Account</h1>
+            <p class="subtitle">Join NexGenyx Bank today</p>
+
+            <lightning-input
+                label="First Name"
+                value={firstName}
+                data-field="firstName"
+                onchange={handleChange}>
+            </lightning-input>
+
+            <lightning-input
+                label="Last Name"
+                value={lastName}
+                data-field="lastName"
+                onchange={handleChange}>
+            </lightning-input>
+
+            <lightning-input
+                label="Email"
+                type="email"
+                value={email}
+                data-field="email"
+                onchange={handleChange}>
+            </lightning-input>
+
+            <lightning-input
+                label="Password"
+                type="password"
+                value={password}
+                data-field="password"
+                onchange={handleChange}>
+            </lightning-input>
+
+            <template if:true={errorMessage}>
+                <p class="error">{errorMessage}</p>
+            </template>
+
+            <lightning-button
+                label="Register"
+                variant="brand"
+                class="btn"
+                onclick={handleRegister}
+                disabled={isLoading}>
+            </lightning-button>
+
+            <p class="link">
+                Already have an account?
+                <a href="/login">Login</a>
+            </p>
+        </div>
+    </div>
+</template>

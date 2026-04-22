@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.left-panel {
+    flex: 1;
+    background: #f4f6f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.right-panel {
+    flex: 1;
+}
+
+.result-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.label {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.value {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.maturity {
+    background: #e8ecf3;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+lightning-input,
+lightning-combobox {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.date-group {
+    margin-bottom: 16px;
+}
+
+.date-wrapper {
+    position: relative;
+}
+
+.custom-date-input {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 12px;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}

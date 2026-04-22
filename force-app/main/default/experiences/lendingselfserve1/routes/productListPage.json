@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "12dbbfe9-2587-46dc-a701-b2237e2e5184",
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "configurationTags" : [ ],
+  "devName" : "PLP",
+  "id" : "8df70a5d-2998-4149-97f4-c471d0f29f11",
+  "label" : "Product List Page",
+  "routeType" : "plp",
+  "type" : "route",
+  "urlPrefix" : "plp"
+}

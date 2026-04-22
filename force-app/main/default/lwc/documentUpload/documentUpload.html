@@ -1,0 +1,66 @@
+<template>
+    <lightning-card title="Documents Flow">
+        <div class="slds-p-around_medium">
+            <lightning-layout multiple-rows="true" vertical-align="start">
+                
+                <lightning-layout-item size="12" medium-device-size="4" class="slds-p-around_small">
+                    <p class="slds-text-title_bold slds-m-bottom_x-small">ID Proof (License/Passport)</p>
+                    
+                    <template lwc:if={idUploaded}>
+                        <div class="slds-box slds-box_xx-small slds-theme_success slds-text-align_center">
+                            ✅ ID Uploaded
+                        </div>
+                    </template>
+                    <template lwc:else>
+                        <lightning-file-upload
+                            label=""
+                            name="idProof"
+                            accept={acceptedFormats}
+                            record-id={recordId}
+                            onuploadfinished={handleIdUpload}>
+                        </lightning-file-upload>
+                    </template>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12" medium-device-size="4" class="slds-p-around_small">
+                    <p class="slds-text-title_bold slds-m-bottom_x-small">Address Proof</p>
+                    
+                    <template lwc:if={addressUploaded}>
+                        <div class="slds-box slds-box_xx-small slds-theme_success slds-text-align_center">
+                            ✅ Address Uploaded
+                        </div>
+                    </template>
+                    <template lwc:else>
+                        <lightning-file-upload
+                            label=""
+                            name="addressProof"
+                            accept={acceptedFormats}
+                            record-id={recordId}
+                            onuploadfinished={handleAddressUpload}>
+                        </lightning-file-upload>
+                    </template>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12" medium-device-size="4" class="slds-p-around_small">
+                    <p class="slds-text-title_bold slds-m-bottom_x-small">Income Proof (Payslip)</p>
+                    
+                    <template lwc:if={incomeUploaded}>
+                        <div class="slds-box slds-box_xx-small slds-theme_success slds-text-align_center">
+                            ✅ Income Uploaded
+                        </div>
+                    </template>
+                    <template lwc:else>
+                        <lightning-file-upload
+                            label=""
+                            name="incomeProof"
+                            accept={acceptedFormats}
+                            record-id={recordId}
+                            onuploadfinished={handleIncomeUpload}>
+                        </lightning-file-upload>
+                    </template>
+                </lightning-layout-item>
+
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

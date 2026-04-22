@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;loanDetails&quot; : null,
+    &quot;employmentDetails&quot; : null,
+    &quot;personalDetails&quot; : null,
+    &quot;expenseDetails&quot; : null,
+    &quot;DataMapperPostAction5&quot; : null,
+    &quot;DataMapperExtractAction1&quot; : null,
+    &quot;DataMapperPostAction3&quot; : null,
+    &quot;DataMapperPostAction4&quot; : null,
+    &quot;incomeDetails&quot; : null,
+    &quot;DataMapperPostAction1&quot; : null,
+    &quot;DataMapperPostAction2&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;loanDetails&quot; : {
+    &quot;totalAmount&quot; : null,
+    &quot;tenureMonths&quot; : null,
+    &quot;loanType&quot; : null,
+    &quot;downPayment&quot; : null,
+    &quot;interestType&quot; : null,
+    &quot;purposeLoan&quot; : null,
+    &quot;loanAmount&quot; : null,
+    &quot;purchaseAmount&quot; : null
+  },
+  &quot;employmentDetails&quot; : {
+    &quot;occupation&quot; : null,
+    &quot;employmentType&quot; : null,
+    &quot;workExperience&quot; : null,
+    &quot;employerName&quot; : null,
+    &quot;officeAddress&quot; : null
+  },
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userTimeZone&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;personalDetails&quot; : {
+    &quot;firstName&quot; : null,
+    &quot;lastName&quot; : null,
+    &quot;dateofBirth&quot; : null,
+    &quot;emailAddress&quot; : null,
+    &quot;gender&quot; : null,
+    &quot;mobileNumber&quot; : null,
+    &quot;panNumber&quot; : null
+  },
+  &quot;expenseDetails&quot; : {
+    &quot;Expenses&quot; : { },
+    &quot;SumOfExp&quot; : null
+  },
+  &quot;DataMapperPostAction5&quot; : { },
+  &quot;DataMapperExtractAction1&quot; : { },
+  &quot;DataMapperPostAction3&quot; : { },
+  &quot;DataMapperPostAction4&quot; : { },
+  &quot;incomeDetails&quot; : {
+    &quot;monthlyNetIncome&quot; : null,
+    &quot;otherIncome&quot; : null,
+    &quot;existingEMIs&quot; : null,
+    &quot;monthlyGrossIncome&quot; : null,
+    &quot;totalLiabilities&quot; : null,
+    &quot;DTI&quot; : null
+  },
+  &quot;DataMapperPostAction1&quot; : { },
+  &quot;DataMapperPostAction2&quot; : { }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>postExpenseDetails</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>c83fe18f-98aa-401c-9563-6784a5329ba4</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>ResidentialLoanApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>894f75b8-f6ed-446e-8838-42aaecc2155b</globalKey>
+        <inputFieldName>ResidentialLoanName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>ResidentialLoanApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>3a2007f8-23ff-4200-909b-6aa42b2f9ffe</globalKey>
+        <inputFieldName>expenseDetails:Expenses:ExpenseType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Expense_Type__c</outputFieldName>
+        <outputObjectName>LoanApplicant</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>5e100215-46e1-47ad-9714-2b9d892f27f8</globalKey>
+        <inputFieldName>expenseDetails:Expenses:monthlyEquivalent</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Monthly_Expenses__c</outputFieldName>
+        <outputObjectName>LoanApplicant</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9f12aade-f920-4dfa-a086-c1a71ac0e885</globalKey>
+        <inputFieldName>expenseDetails:SumOfExp</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Total_Monthly_Expenses__c</outputFieldName>
+        <outputObjectName>ResidentialLoanApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a30e9bed-9c45-4673-8709-c965ae696ced</globalKey>
+        <inputFieldName>accId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>ResidentialLoanApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>5c7ef9e7-cca1-4eff-93bd-59ec2d649183</globalKey>
+        <inputFieldName>LoanApplicantName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>LoanApplicant</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ba9a3a55-26fa-4d0d-a8ac-991441ca35c8</globalKey>
+        <inputFieldName>expenseDetails:Expenses:expenseAmount</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Expense_Amount__c</outputFieldName>
+        <outputObjectName>LoanApplicant</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>284fa25b-e963-489e-a477-b4f5bd7e522a</globalKey>
+        <inputFieldName>expenseDetails:Expenses:frequency</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Frequency__c</outputFieldName>
+        <outputObjectName>LoanApplicant</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:personalDetails:firstName &quot;/\/\/&quot; var:personalDetails:lastName &quot;/\/\/Application-&quot; | | NOW &quot;yyyyMMdd-HHmm&quot; FORMATDATETIME CONCAT</formulaConverted>
+        <formulaExpression>CONCAT(personalDetails:firstName, &quot; &quot;, personalDetails:lastName, &quot; Application-&quot;, FORMATDATETIME(NOW(), &quot;yyyyMMdd-HHmm&quot;))</formulaExpression>
+        <formulaResultPath>ResidentialLoanName</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>89a6dceb-bf04-4e5a-ba19-d1b5c275e8aa</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>faff7512-3b70-4297-9383-d94e3089e92f</globalKey>
+        <inputFieldName>DRId_ResidentialLoanApplication</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>LoanApplicationId</outputFieldName>
+        <outputObjectName>LoanApplicant</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>66686925-d158-470f-92ce-c0d46f86395f</globalKey>
+        <inputFieldName>DRId_ResidentialLoanApplication</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>ResidentialLoanApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:personalDetails:firstName &quot;/\/\/&quot; var:personalDetails:lastName &quot;/\/\/Applicant-&quot; | | NOW &quot;yyyyMMdd-HHmm&quot; FORMATDATETIME CONCAT</formulaConverted>
+        <formulaExpression>CONCAT(personalDetails:firstName, &quot; &quot;, personalDetails:lastName, &quot; Applicant-&quot;, FORMATDATETIME(NOW(), &quot;yyyyMMdd-HHmm&quot;))</formulaExpression>
+        <formulaResultPath>LoanApplicantName</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>66f98448-38d4-4a0f-a012-81c52f794e3c</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>9d6b3f3d-0a6e-4d71-be99-85cdf61c91df</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>postExpenseDetails</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>LoanApplicant</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>postExpenseDetails_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

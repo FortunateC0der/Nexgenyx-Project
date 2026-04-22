@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "2bf4edb5-77b4-4a31-986e-55312bafc50d",
+  "appPageId" : "19ceb29e-4f20-41c4-ba17-b00e56449380",
+  "configurationTags" : [ ],
+  "devName" : "NonQualified_Product",
+  "id" : "0b4342fa-6b5e-4ba4-b785-62b6f93b8218",
+  "label" : "Non Qualified Product",
+  "routeType" : "nonqualified-product",
+  "type" : "route",
+  "urlPrefix" : "nonqualified-product"
+}

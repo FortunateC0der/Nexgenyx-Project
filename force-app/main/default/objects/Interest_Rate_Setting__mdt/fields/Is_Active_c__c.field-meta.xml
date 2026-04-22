@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Active_c__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Only one rate should be active at a time</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Is_Active__c</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejection_Reason</fullName>
+    <active>true</active>
+    <description>Rejection Reason is required when rejecting a document.</description>
+    <errorConditionFormula>AND(
+ ISPICKVAL(Status, &quot;Rejected&quot;),
+ ISBLANK(Comments)
+)</errorConditionFormula>
+    <errorDisplayField>IsAccepted</errorDisplayField>
+    <errorMessage>Enter rejection reason</errorMessage>
+</ValidationRule>

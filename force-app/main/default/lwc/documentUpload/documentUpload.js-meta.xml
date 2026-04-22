@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Document Uploader Flow Component</masterLabel>
+    
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="recordId" type="String" label="Record ID" role="inputOnly"/>
+            
+            <property name="idUploaded" type="Boolean" label="ID Proof Uploaded?" role="outputOnly"/>
+            <property name="addressUploaded" type="Boolean" label="Address Proof Uploaded?" role="outputOnly"/>
+            <property name="incomeUploaded" type="Boolean" label="Income Proof Uploaded?" role="outputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

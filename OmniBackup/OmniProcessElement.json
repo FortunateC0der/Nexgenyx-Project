@@ -1,0 +1,635 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef1"
+            },
+            "Name": "personalDetails",
+            "IsActive": true,
+            "Type": "Step",
+            "PropertySetConfig": "{\"label\":\"Personal Details\",\"validationRequired\":true,\"previousLabel\":\"Previous\",\"previousWidth\":3,\"nextLabel\":\"Next\",\"nextWidth\":3,\"cancelLabel\":\"Cancel\",\"cancelMessage\":\"Are you sure?\",\"saveLabel\":\"Save for later\",\"saveChangesLabel\":\"Save Changes\",\"autoSaveLabel\":\"Auto Save on Assessment Progress\",\"saveMessage\":\"Are you sure you want to save it for later?\",\"completeLabel\":\"Complete\",\"completeMessage\":\"Are you sure you want to complete the script?\",\"instruction\":\"<p>Captures the borrower&rsquo;s essential personal information required to initiate the loan application. This includes full name, ID number, date of birth, contact details, and residential address. The information collected in this step is used to verify the applicant&rsquo;s identity and establish a customer profile.</p>\",\"showPersistentComponent\":[true,false],\"remoteClass\":\"\",\"remoteMethod\":\"\",\"remoteTimeout\":30000,\"remoteOptions\":{},\"knowledgeOptions\":{\"language\":\"English\",\"publishStatus\":\"Online\",\"keyword\":\"\",\"dataCategoryCriteria\":\"\",\"remoteTimeout\":30000,\"typeFilter\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"HTMLTemplateId\":\"\",\"instructionKey\":\"\",\"chartLabel\":null,\"allowSaveForLater\":true,\"allowSaveChanges\":false,\"autoSaveChanges\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef2"
+            },
+            "Name": "firstName",
+            "IsActive": true,
+            "Type": "Text",
+            "ParentElementId": "@OmniProcessElementRef1",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"First Name\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":true,\"defaultValue\":\"%fName%\",\"help\":false,\"helpText\":\"\",\"mask\":\"\",\"pattern\":\"\",\"ptrnErrText\":\"\",\"minLength\":0,\"maxLength\":255,\"placeholder\":\"\",\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 0,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef3"
+            },
+            "Name": "lastName",
+            "IsActive": true,
+            "Type": "Text",
+            "ParentElementId": "@OmniProcessElementRef1",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Last Name\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":true,\"defaultValue\":\"%lName%\",\"help\":false,\"helpText\":\"\",\"mask\":\"\",\"pattern\":\"\",\"ptrnErrText\":\"\",\"minLength\":0,\"maxLength\":255,\"placeholder\":\"\",\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 1,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef4"
+            },
+            "Name": "dateofBirth",
+            "IsActive": true,
+            "Type": "Date",
+            "ParentElementId": "@OmniProcessElementRef1",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Date of Birth\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":\"\",\"help\":false,\"helpText\":\"\",\"dateType\":\"string\",\"modelDateFormat\":\"yyyy-MM-dd\",\"dateFormat\":\"MM-dd-yyyy\",\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false,\"minDate\":\"\",\"maxDate\":\"\"}",
+            "SequenceNumber": 4,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef5"
+            },
+            "Name": "gender",
+            "IsActive": true,
+            "Type": "Select",
+            "ParentElementId": "@OmniProcessElementRef1",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Gender\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"options\":[{\"name\":\"Male\",\"value\":\"Male\",\"autoAdv\":null},{\"name\":\"Female\",\"value\":\"Female\",\"autoAdv\":null},{\"name\":\"Other\",\"value\":\"Other\",\"autoAdv\":null}],\"optionSource\":{\"type\":\"\",\"source\":\"\"},\"controllingField\":{\"element\":\"\",\"type\":\"\",\"source\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 5,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef6"
+            },
+            "Name": "emailAddress",
+            "IsActive": true,
+            "Type": "Text",
+            "ParentElementId": "@OmniProcessElementRef1",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Email Address\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":\"%emailAddress%\",\"help\":false,\"helpText\":\"\",\"mask\":\"\",\"pattern\":\"\",\"ptrnErrText\":\"\",\"minLength\":0,\"maxLength\":255,\"placeholder\":\"\",\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 3,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef7"
+            },
+            "Name": "employmentDetails",
+            "IsActive": true,
+            "Type": "Step",
+            "PropertySetConfig": "{\"label\":\"Employment Details\",\"validationRequired\":true,\"previousLabel\":\"Previous\",\"previousWidth\":3,\"nextLabel\":\"Next\",\"nextWidth\":3,\"cancelLabel\":\"Cancel\",\"cancelMessage\":\"Are you sure?\",\"saveLabel\":\"Save for later\",\"saveChangesLabel\":\"Save Changes\",\"saveMessage\":\"Are you sure you want to save it for later?\",\"completeLabel\":\"Complete\",\"completeMessage\":\"Are you sure you want to complete the script?\",\"instruction\":\"<p>Gathers information about the applicant&rsquo;s current employment status and work history. This includes employer name, job title, employment type (permanent, contract, self-employed), and length of employment. These details help assess the applicant&rsquo;s job stability and reliability as a borrower.</p>\",\"showPersistentComponent\":[true,false],\"remoteClass\":\"\",\"remoteMethod\":\"\",\"remoteTimeout\":30000,\"remoteOptions\":{},\"knowledgeOptions\":{\"language\":\"English\",\"publishStatus\":\"Online\",\"keyword\":\"\",\"dataCategoryCriteria\":\"\",\"remoteTimeout\":30000,\"typeFilter\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"HTMLTemplateId\":\"\",\"instructionKey\":\"\",\"chartLabel\":null,\"allowSaveForLater\":true,\"allowSaveChanges\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"ariaLevel\":2,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef8"
+            },
+            "Name": "employmentType",
+            "IsActive": true,
+            "Type": "Select",
+            "ParentElementId": "@OmniProcessElementRef7",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Employment Type\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"options\":[{\"name\":\"Employed\",\"value\":\"Employed\",\"autoAdv\":null},{\"name\":\"Part-time\",\"value\":\"Part-time\",\"autoAdv\":null},{\"name\":\"Temporary\",\"value\":\"Temporary\",\"autoAdv\":null},{\"name\":\"Full-time\",\"value\":\"Full-time\",\"autoAdv\":null}],\"optionSource\":{\"type\":\"\",\"source\":\"\"},\"controllingField\":{\"element\":\"\",\"type\":\"\",\"source\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 0,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef9"
+            },
+            "Name": "employerName",
+            "IsActive": true,
+            "Type": "Text",
+            "ParentElementId": "@OmniProcessElementRef7",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Employer Name\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"mask\":\"\",\"pattern\":\"\",\"ptrnErrText\":\"\",\"minLength\":0,\"maxLength\":255,\"placeholder\":\"\",\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 1,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef10"
+            },
+            "Name": "occupation",
+            "IsActive": true,
+            "Type": "Select",
+            "ParentElementId": "@OmniProcessElementRef7",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Occupation\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":false,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"options\":[{\"name\":\"Management\",\"value\":\"Management\",\"autoAdv\":null},{\"name\":\"Computer and Mathematical\",\"value\":\"Computer and Mathematical\",\"autoAdv\":null},{\"name\":\"Architecture and Engineering\",\"value\":\"Architecture and Engineering\",\"autoAdv\":null},{\"name\":\"Community and Social Service\",\"value\":\"Community and Social Service\",\"autoAdv\":null},{\"name\":\"Sales\",\"value\":\"Sales\",\"autoAdv\":null},{\"name\":\"Chief Information Officer CIO\",\"value\":\"Chief Information Officer CIO\",\"autoAdv\":null},{\"name\":\"Other\",\"value\":\"Other\",\"autoAdv\":null}],\"optionSource\":{\"type\":\"\",\"source\":\"\"},\"controllingField\":{\"element\":\"\",\"type\":\"\",\"source\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 3,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef11"
+            },
+            "Name": "officeAddress",
+            "IsActive": true,
+            "Type": "Text Area",
+            "ParentElementId": "@OmniProcessElementRef7",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Office Address\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"pattern\":\"\",\"ptrnErrText\":\"\",\"minLength\":0,\"maxLength\":255,\"placeholder\":\"\",\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 4,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef12"
+            },
+            "Name": "workExperience",
+            "IsActive": true,
+            "Type": "Number",
+            "ParentElementId": "@OmniProcessElementRef7",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Work Experience\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":false,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"pattern\":\"\",\"ptrnErrText\":\"\",\"placeholder\":\"\",\"mask\":null,\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 5,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef13"
+            },
+            "Name": "incomeDetails",
+            "IsActive": true,
+            "Type": "Step",
+            "PropertySetConfig": "{\"label\":\"Income Details\",\"validationRequired\":true,\"previousLabel\":\"Previous\",\"previousWidth\":3,\"nextLabel\":\"Next\",\"nextWidth\":3,\"cancelLabel\":\"Cancel\",\"cancelMessage\":\"Are you sure?\",\"saveLabel\":\"Save for later\",\"saveChangesLabel\":\"Save Changes\",\"saveMessage\":\"Are you sure you want to save it for later?\",\"completeLabel\":\"Complete\",\"completeMessage\":\"Are you sure you want to complete the script?\",\"instruction\":\"<p>applicant&rsquo;s financial earnings and income sources. This includes monthly salary, additional income streams, and frequency of earnings. The data collected here is used to evaluate affordability and determine the applicant&rsquo;s capacity to repay the loan.</p>\",\"showPersistentComponent\":[true,false],\"remoteClass\":\"\",\"remoteMethod\":\"\",\"remoteTimeout\":30000,\"remoteOptions\":{},\"knowledgeOptions\":{\"language\":\"English\",\"publishStatus\":\"Online\",\"keyword\":\"\",\"dataCategoryCriteria\":\"\",\"remoteTimeout\":30000,\"typeFilter\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"HTMLTemplateId\":\"\",\"instructionKey\":\"\",\"chartLabel\":null,\"allowSaveForLater\":true,\"allowSaveChanges\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"ariaLevel\":2,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 4,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef14"
+            },
+            "Name": "monthlyGrossIncome",
+            "IsActive": true,
+            "Type": "Currency",
+            "ParentElementId": "@OmniProcessElementRef13",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Monthly Gross Income\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"mask\":null,\"min\":null,\"max\":null,\"placeholder\":\"\",\"allowNegative\":false,\"hideGroupSep\":false,\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false,\"displayCurrencyCode\":false}",
+            "SequenceNumber": 0,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef15"
+            },
+            "Name": "monthlyNetIncome",
+            "IsActive": true,
+            "Type": "Currency",
+            "ParentElementId": "@OmniProcessElementRef13",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Monthly Net Income\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"mask\":null,\"min\":null,\"max\":null,\"placeholder\":\"\",\"allowNegative\":false,\"hideGroupSep\":false,\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false,\"displayCurrencyCode\":false}",
+            "SequenceNumber": 1,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef16"
+            },
+            "Name": "otherIncome",
+            "IsActive": true,
+            "Type": "Currency",
+            "ParentElementId": "@OmniProcessElementRef13",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Other Income\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":false,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"mask\":null,\"min\":null,\"max\":null,\"placeholder\":\"\",\"allowNegative\":false,\"hideGroupSep\":false,\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false,\"displayCurrencyCode\":false}",
+            "SequenceNumber": 2,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef17"
+            },
+            "Name": "existingEMIs",
+            "IsActive": true,
+            "Type": "Currency",
+            "ParentElementId": "@OmniProcessElementRef13",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Monthly Repayments\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":false,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"mask\":null,\"min\":null,\"max\":null,\"placeholder\":\"\",\"allowNegative\":false,\"hideGroupSep\":false,\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false,\"displayCurrencyCode\":false}",
+            "SequenceNumber": 3,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef18"
+            },
+            "Name": "totalLiabilities",
+            "IsActive": true,
+            "Type": "Currency",
+            "ParentElementId": "@OmniProcessElementRef13",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Total Liabilities\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"mask\":null,\"min\":null,\"max\":null,\"placeholder\":\"\",\"allowNegative\":false,\"hideGroupSep\":false,\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false,\"displayCurrencyCode\":false}",
+            "SequenceNumber": 4,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef19"
+            },
+            "Name": "expenseDetails",
+            "IsActive": true,
+            "Type": "Step",
+            "PropertySetConfig": "{\"label\":\"Expense Details\",\"validationRequired\":true,\"previousLabel\":\"Previous\",\"previousWidth\":3,\"nextLabel\":\"Next\",\"nextWidth\":3,\"cancelLabel\":\"Cancel\",\"cancelMessage\":\"Are you sure?\",\"saveLabel\":\"Save for later\",\"saveChangesLabel\":\"Save Changes\",\"saveMessage\":\"Are you sure you want to save it for later?\",\"completeLabel\":\"Complete\",\"completeMessage\":\"Are you sure you want to complete the script?\",\"instruction\":\"<p>monthly financial obligations and living expenses. This includes rent or bond payments, utilities, transport costs, groceries, insurance, and any other recurring expenses.</p>\",\"showPersistentComponent\":[true,false],\"remoteClass\":\"\",\"remoteMethod\":\"\",\"remoteTimeout\":30000,\"remoteOptions\":{},\"knowledgeOptions\":{\"language\":\"English\",\"publishStatus\":\"Online\",\"keyword\":\"\",\"dataCategoryCriteria\":\"\",\"remoteTimeout\":30000,\"typeFilter\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"HTMLTemplateId\":\"\",\"instructionKey\":\"\",\"chartLabel\":null,\"allowSaveForLater\":true,\"allowSaveChanges\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"ariaLevel\":2,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 5,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef20"
+            },
+            "Name": "expenseAmount",
+            "IsActive": true,
+            "Type": "Currency",
+            "ParentElementId": "@OmniProcessElementRef28",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Expense Amount\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"mask\":null,\"min\":null,\"max\":null,\"placeholder\":\"\",\"allowNegative\":false,\"hideGroupSep\":false,\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":true,\"displayCurrencyCode\":false}",
+            "SequenceNumber": 1,
+            "Level": 2,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef21"
+            },
+            "Name": "frequency",
+            "IsActive": true,
+            "Type": "Select",
+            "ParentElementId": "@OmniProcessElementRef28",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Frequency\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"options\":[{\"name\":\"Monthly\",\"value\":\"Monthly\",\"autoAdv\":null},{\"name\":\"Quarterly\",\"value\":\"Quarterly\",\"autoAdv\":null},{\"name\":\"Yearly\",\"value\":\"Yearly\",\"autoAdv\":null}],\"optionSource\":{\"type\":\"\",\"source\":\"\"},\"controllingField\":{\"element\":\"\",\"type\":\"\",\"source\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":true}",
+            "SequenceNumber": 2,
+            "Level": 2,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef22"
+            },
+            "Name": "loanDetails",
+            "IsActive": true,
+            "Type": "Step",
+            "PropertySetConfig": "{\"label\":\"Loan Details\",\"validationRequired\":true,\"previousLabel\":\"Previous\",\"previousWidth\":3,\"nextLabel\":\"Next\",\"nextWidth\":3,\"cancelLabel\":\"Cancel\",\"cancelMessage\":\"Are you sure?\",\"saveLabel\":\"Save for later\",\"saveChangesLabel\":\"Save Changes\",\"saveMessage\":\"Are you sure you want to save it for later?\",\"completeLabel\":\"Complete\",\"completeMessage\":\"Are you sure you want to complete the script?\",\"instruction\":\"<p>specifics of the loan being applied for. This includes the desired loan amount, repayment term, loan purpose, and preferred repayment options. The information gathered in this step is used to structure the loan offering and align it with the applicant&rsquo;s financial profile and needs</p>\\n<p>&nbsp;</p>\",\"showPersistentComponent\":[true,false],\"remoteClass\":\"\",\"remoteMethod\":\"\",\"remoteTimeout\":30000,\"remoteOptions\":{},\"knowledgeOptions\":{\"language\":\"English\",\"publishStatus\":\"Online\",\"keyword\":\"\",\"dataCategoryCriteria\":\"\",\"remoteTimeout\":30000,\"typeFilter\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"HTMLTemplateId\":\"\",\"instructionKey\":\"\",\"chartLabel\":null,\"allowSaveForLater\":true,\"allowSaveChanges\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"ariaLevel\":2,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 6,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef23"
+            },
+            "Name": "loanType",
+            "IsActive": true,
+            "Type": "Select",
+            "ParentElementId": "@OmniProcessElementRef22",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Loan Type\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"options\":[{\"name\":\"Home loan\",\"value\":\"Home loan\",\"autoAdv\":null},{\"name\":\"Vehicle\",\"value\":\"Vehicle\",\"autoAdv\":null},{\"name\":\"Personal Loan\",\"value\":\"Personal Loan\",\"autoAdv\":null}],\"optionSource\":{\"type\":\"\",\"source\":\"\"},\"controllingField\":{\"element\":\"\",\"type\":\"\",\"source\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 0,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef24"
+            },
+            "Name": "purchaseAmount",
+            "IsActive": true,
+            "Type": "Currency",
+            "ParentElementId": "@OmniProcessElementRef22",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Purchase Amount\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"mask\":null,\"min\":null,\"max\":null,\"placeholder\":\"\",\"allowNegative\":false,\"hideGroupSep\":false,\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false,\"displayCurrencyCode\":false}",
+            "SequenceNumber": 2,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef25"
+            },
+            "Name": "downPayment",
+            "IsActive": true,
+            "Type": "Currency",
+            "ParentElementId": "@OmniProcessElementRef22",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Down Payment\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"mask\":null,\"min\":null,\"max\":null,\"placeholder\":\"\",\"allowNegative\":false,\"hideGroupSep\":false,\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false,\"displayCurrencyCode\":false}",
+            "SequenceNumber": 3,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef26"
+            },
+            "Name": "tenureMonths",
+            "IsActive": true,
+            "Type": "Number",
+            "ParentElementId": "@OmniProcessElementRef22",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Loan Tenure (Months)\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"pattern\":\"\",\"ptrnErrText\":\"\",\"placeholder\":\"\",\"mask\":null,\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 4,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef27"
+            },
+            "Name": "purposeLoan",
+            "IsActive": true,
+            "Type": "Select",
+            "ParentElementId": "@OmniProcessElementRef22",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Purpose Loan\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":false,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"options\":[{\"name\":\"Purchase\",\"value\":\"Purchase\",\"autoAdv\":null},{\"name\":\"Refinance\",\"value\":\"Refinance\",\"autoAdv\":null},{\"name\":\"Other\",\"value\":\"Other\",\"autoAdv\":null}],\"optionSource\":{\"type\":\"\",\"source\":\"\"},\"controllingField\":{\"element\":\"\",\"type\":\"\",\"source\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 5,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef28"
+            },
+            "Name": "Expenses",
+            "IsActive": true,
+            "Type": "Edit Block",
+            "ParentElementId": "@OmniProcessElementRef19",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Expenses\",\"allowEdit\":true,\"allowNew\":true,\"allowDelete\":true,\"newLabel\":\"New\",\"editLabel\":\"Edit\",\"deleteLabel\":\"Delete\",\"selectMode\":\"Multi\",\"selectCheckBox\":\"\",\"svgSprite\":\"utility\",\"svgIcon\":\"user\",\"elementName\":\"\",\"valueSvgMap\":[],\"selectSobject\":\"LoanApplicant\",\"sobjectMapping\":[{\"osElement\":\"expenseAmount\",\"sObjectField\":\"Expense_Amount__c\",\"duplicateKey\":false},{\"osElement\":\"frequency\",\"sObjectField\":\"Frequency__c\",\"duplicateKey\":false},{\"osElement\":\"Select1\",\"sObjectField\":\"Expense_Type__c\",\"duplicateKey\":false},{\"osElement\":\"Formula2\",\"sObjectField\":\"Monthly_Expenses__c\",\"duplicateKey\":false}],\"sumElement\":\"\",\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"HTMLTemplateId\":\"\",\"hide\":false,\"mode\":\"Table\",\"maxDisplay\":5}",
+            "SequenceNumber": 0,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef29"
+            },
+            "Name": "ExpenseType",
+            "IsActive": true,
+            "Type": "Select",
+            "ParentElementId": "@OmniProcessElementRef28",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Expense Type\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":false,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"options\":[{\"name\":\"Utilities\",\"value\":\"Utilities\",\"autoAdv\":null},{\"name\":\"Household\",\"value\":\"Household\",\"autoAdv\":null},{\"name\":\"Education\",\"value\":\"Education\",\"autoAdv\":null},{\"name\":\"Insurance\",\"value\":\"Insurance\",\"autoAdv\":null},{\"name\":\"Other\",\"value\":\"Other\",\"autoAdv\":null},{\"name\":\"Rent\",\"value\":\"Rent\",\"autoAdv\":null},{\"name\":\"Healthcare\",\"value\":\"Healthcare\",\"autoAdv\":null}],\"optionSource\":{\"type\":\"\",\"source\":\"\"},\"controllingField\":{\"element\":\"\",\"type\":\"\",\"source\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":true}",
+            "SequenceNumber": 0,
+            "Level": 2,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef30"
+            },
+            "Name": "SumOfExp",
+            "IsActive": true,
+            "Type": "Formula",
+            "ParentElementId": "@OmniProcessElementRef19",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Sum Of Expenses\",\"showInputWidth\":false,\"inputWidth\":12,\"expression\":\"SUM(%Expenses:monthlyEquivalent%)\",\"hide\":false,\"show\":null,\"mask\":null,\"dataType\":null,\"hideGroupSep\":false,\"dateFormat\":\"MM-dd-yyyy\",\"HTMLTemplateId\":\"\",\"disOnTplt\":false}",
+            "SequenceNumber": 1,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef31"
+            },
+            "Name": "monthlyEquivalent",
+            "IsActive": true,
+            "Type": "Formula",
+            "ParentElementId": "@OmniProcessElementRef28",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Monthly Equivalent\",\"showInputWidth\":false,\"inputWidth\":12,\"expression\":\"IF(%Expenses|n:frequency% == \\\"Yearly\\\", %Expenses|n:expenseAmount% / 12, IF(%Expenses|n:frequency% == \\\"Quarterly\\\", %Expenses|n:expenseAmount% / 3, IF(%Expenses|n:frequency% == \\\"Weekly\\\", %Expenses|n:expenseAmount% * 4.33, IF(%Expenses|n:frequency% == \\\"Monthly\\\", %Expenses|n:expenseAmount%, 0))))\",\"hide\":false,\"show\":null,\"mask\":null,\"dataType\":\"Currency\",\"hideGroupSep\":false,\"dateFormat\":\"MM-dd-yyyy\",\"HTMLTemplateId\":\"\",\"disOnTplt\":true}",
+            "SequenceNumber": 3,
+            "Level": 2,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef32"
+            },
+            "Name": "MappingLoanDetails",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"MappingLoanDetails\",\"bundle\":\"MappingLoanDetails\",\"remoteTimeout\":30000,\"postTransformBundle\":\"\",\"sendJSONPath\":\"\",\"sendJSONNode\":\"\",\"inProgressMessage\":\"In Progress\",\"postMessage\":\"Done\",\"failureNextLabel\":\"Continue\",\"failureAbortLabel\":\"Abort\",\"failureGoBackLabel\":\"Go Back\",\"failureAbortMessage\":\"Are you sure?\",\"validationRequired\":\"Submit\",\"redirectPageName\":\"\",\"redirectTemplateUrl\":\"vlcAcknowledge.html\",\"redirectNextLabel\":\"Next\",\"redirectNextWidth\":3,\"redirectPreviousLabel\":\"Previous\",\"redirectPreviousWidth\":3,\"showPersistentComponent\":[true,false],\"show\":null,\"HTMLTemplateId\":\"\",\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"enableDefaultAbort\":false,\"enableActionMessage\":false,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 10,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef33"
+            },
+            "Name": "GetAccountInfo",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"GetAccountInfo\",\"bundle\":\"GetAccountInfo\",\"ignoreCache\":false,\"dataRaptor Input Parameters\":[{\"element\":\"\",\"inputParam\":null}],\"remoteTimeout\":30000,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"inProgressMessage\":\"In Progress\",\"postMessage\":\"Done\",\"failureNextLabel\":\"Continue\",\"failureAbortLabel\":\"Abort\",\"failureGoBackLabel\":\"Go Back\",\"failureAbortMessage\":\"Are you sure?\",\"validationRequired\":\"Step\",\"redirectPageName\":\"\",\"redirectTemplateUrl\":\"vlcAcknowledge.html\",\"redirectNextLabel\":\"Next\",\"redirectNextWidth\":3,\"redirectPreviousLabel\":\"Previous\",\"redirectPreviousWidth\":3,\"showPersistentComponent\":[true,false],\"show\":null,\"HTMLTemplateId\":\"\",\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"enableDefaultAbort\":false,\"enableActionMessage\":false,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 0,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef34"
+            },
+            "Name": "mobileNumber",
+            "IsActive": true,
+            "Type": "Telephone",
+            "ParentElementId": "@OmniProcessElementRef1",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Mobile Number\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":\"%Phone%\",\"help\":false,\"helpText\":\"\",\"mask\":\"(999) 999-9999\",\"pattern\":\"\",\"ptrnErrText\":\"\",\"minLength\":0,\"maxLength\":255,\"placeholder\":\"\",\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 6,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef35"
+            },
+            "Name": "CreateLoanApplication",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"CreateLoanApplication\",\"bundle\":\"CreateLoanApplication\",\"remoteTimeout\":30000,\"postTransformBundle\":\"\",\"sendJSONPath\":\"\",\"sendJSONNode\":\"\",\"inProgressMessage\":\"In Progress\",\"postMessage\":\"Done\",\"failureNextLabel\":\"Continue\",\"failureAbortLabel\":\"Abort\",\"failureGoBackLabel\":\"Go Back\",\"failureAbortMessage\":\"Are you sure?\",\"validationRequired\":\"Submit\",\"redirectPageName\":\"\",\"redirectTemplateUrl\":\"vlcAcknowledge.html\",\"redirectNextLabel\":\"Next\",\"redirectNextWidth\":3,\"redirectPreviousLabel\":\"Previous\",\"redirectPreviousWidth\":3,\"showPersistentComponent\":[true,false],\"show\":null,\"HTMLTemplateId\":\"\",\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"enableDefaultAbort\":false,\"enableActionMessage\":false,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 7,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef36"
+            },
+            "Name": "MappingIncomeDetails",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"MappingIncomeDetails\",\"bundle\":\"MappingIncomeDetails\",\"remoteTimeout\":30000,\"postTransformBundle\":\"\",\"sendJSONPath\":\"\",\"sendJSONNode\":\"\",\"inProgressMessage\":\"In Progress\",\"postMessage\":\"Done\",\"failureNextLabel\":\"Continue\",\"failureAbortLabel\":\"Abort\",\"failureGoBackLabel\":\"Go Back\",\"failureAbortMessage\":\"Are you sure?\",\"validationRequired\":\"Submit\",\"redirectPageName\":\"\",\"redirectTemplateUrl\":\"vlcAcknowledge.html\",\"redirectNextLabel\":\"Next\",\"redirectNextWidth\":3,\"redirectPreviousLabel\":\"Previous\",\"redirectPreviousWidth\":3,\"showPersistentComponent\":[true,false],\"show\":null,\"HTMLTemplateId\":\"\",\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"enableDefaultAbort\":false,\"enableActionMessage\":false,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 8,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef37"
+            },
+            "Name": "Ineligible",
+            "IsActive": true,
+            "Type": "Text Block",
+            "ParentElementId": "@OmniProcessElementRef13",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"TextBlock2\",\"text\":\"<p><strong class=\\\"!text-neutral-a12\\\">Based on the information provided, you do not currently meet the initial eligibility criteria for this loan.</strong></p>\",\"show\":{\"group\":{\"operator\":\"AND\",\"rules\":[{\"data\":\"0.40\",\"condition\":\">\",\"field\":\"DTI\"}]}},\"dataJSON\":false,\"HTMLTemplateId\":\"\",\"textKey\":\"\",\"sanitize\":false,\"lwcComponentOverride\":\"\"}",
+            "SequenceNumber": 5,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef38"
+            },
+            "Name": "postExpenseDetails",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"postExpenseDetails\",\"bundle\":\"postExpenseDetails\",\"remoteTimeout\":30000,\"postTransformBundle\":\"\",\"sendJSONPath\":\"\",\"sendJSONNode\":\"\",\"inProgressMessage\":\"In Progress\",\"postMessage\":\"Done\",\"failureNextLabel\":\"Continue\",\"failureAbortLabel\":\"Abort\",\"failureGoBackLabel\":\"Go Back\",\"failureAbortMessage\":\"Are you sure?\",\"validationRequired\":\"Submit\",\"redirectPageName\":\"\",\"redirectTemplateUrl\":\"vlcAcknowledge.html\",\"redirectNextLabel\":\"Next\",\"redirectNextWidth\":3,\"redirectPreviousLabel\":\"Previous\",\"redirectPreviousWidth\":3,\"showPersistentComponent\":[true,false],\"show\":null,\"HTMLTemplateId\":\"\",\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"enableDefaultAbort\":false,\"enableActionMessage\":false,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 9,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef39"
+            },
+            "Name": "Submit",
+            "IsActive": true,
+            "Type": "Step",
+            "PropertySetConfig": "{\"label\":\"Upload Documents\",\"validationRequired\":true,\"previousLabel\":\"Previous\",\"previousWidth\":3,\"nextLabel\":\"Next\",\"nextWidth\":3,\"cancelLabel\":\"Cancel\",\"cancelMessage\":\"Are you sure?\",\"saveLabel\":\"Save for later\",\"saveChangesLabel\":\"Save Changes\",\"saveMessage\":\"Are you sure you want to save it for later?\",\"completeLabel\":\"Complete\",\"completeMessage\":\"Are you sure you want to complete the script?\",\"instruction\":\"\",\"showPersistentComponent\":[true,false],\"remoteClass\":\"\",\"remoteMethod\":\"\",\"remoteTimeout\":30000,\"remoteOptions\":{},\"knowledgeOptions\":{\"language\":\"English\",\"publishStatus\":\"Online\",\"keyword\":\"\",\"dataCategoryCriteria\":\"\",\"remoteTimeout\":30000,\"typeFilter\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"HTMLTemplateId\":\"\",\"instructionKey\":\"\",\"chartLabel\":null,\"allowSaveForLater\":true,\"allowSaveChanges\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"ariaLevel\":2,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 11,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef40"
+            },
+            "Name": "CustomLWC1",
+            "IsActive": true,
+            "Type": "Custom Lightning Web Component",
+            "ParentElementId": "@OmniProcessElementRef39",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"CustomLWC1\",\"show\":null,\"conditionType\":\"Hide if False\",\"hide\":false,\"lwcName\":\"omniscriptButton\",\"bStandalone\":false,\"customAttributes\":[]}",
+            "SequenceNumber": 0,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef41"
+            },
+            "Name": "Step1",
+            "IsActive": true,
+            "Type": "Step",
+            "PropertySetConfig": "{\"label\":\"Submission Confirmation\",\"validationRequired\":true,\"previousLabel\":\"Previous\",\"previousWidth\":3,\"nextLabel\":\"Next\",\"nextWidth\":3,\"cancelLabel\":\"Cancel\",\"cancelMessage\":\"Are you sure?\",\"saveLabel\":\"Save for later\",\"saveChangesLabel\":\"Save Changes\",\"saveMessage\":\"Are you sure you want to save it for later?\",\"completeLabel\":\"Complete\",\"completeMessage\":\"Are you sure you want to complete the script?\",\"instruction\":\"\",\"showPersistentComponent\":[true,false],\"remoteClass\":\"\",\"remoteMethod\":\"\",\"remoteTimeout\":30000,\"remoteOptions\":{},\"knowledgeOptions\":{\"language\":\"English\",\"publishStatus\":\"Online\",\"keyword\":\"\",\"dataCategoryCriteria\":\"\",\"remoteTimeout\":30000,\"typeFilter\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"HTMLTemplateId\":\"\",\"instructionKey\":\"\",\"chartLabel\":null,\"allowSaveForLater\":true,\"allowSaveChanges\":false,\"errorMessage\":{\"custom\":[],\"default\":null},\"wpm\":false,\"ssm\":false,\"message\":{},\"pubsub\":false,\"ariaLevel\":2,\"businessCategory\":\"\",\"businessEvent\":\"\"}",
+            "SequenceNumber": 12,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef42"
+            },
+            "Name": "TextBlock1",
+            "IsActive": true,
+            "Type": "Text Block",
+            "ParentElementId": "@OmniProcessElementRef41",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"TextBlock1\",\"text\":\"<p data-start=\\\"1584\\\" data-end=\\\"1804\\\"><strong data-start=\\\"1584\\\" data-end=\\\"1611\\\">Submission Confirmation</strong><br data-start=\\\"1611\\\" data-end=\\\"1614\\\">Your loan application has been successfully submitted and is currently under review.<br data-start=\\\"1698\\\" data-end=\\\"1701\\\"><strong data-start=\\\"1701\\\" data-end=\\\"1716\\\">Next stage:</strong> A credit assessment will be conducted, after which you will be informed of the outcome.</p>\",\"show\":null,\"dataJSON\":false,\"HTMLTemplateId\":\"\",\"textKey\":\"\",\"sanitize\":false}",
+            "SequenceNumber": 0,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef43"
+            },
+            "Name": "InterestType",
+            "IsActive": true,
+            "Type": "Select",
+            "ParentElementId": "@OmniProcessElementRef22",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Interest Type\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":false,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"options\":[{\"name\":\"Fixed\",\"value\":\"Fixed\",\"autoAdv\":null},{\"name\":\"Floating\",\"value\":\"Floating\",\"autoAdv\":null}],\"optionSource\":{\"type\":\"\",\"source\":\"\"},\"controllingField\":{\"element\":\"\",\"type\":\"\",\"source\":\"\"},\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 1,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef44"
+            },
+            "Name": "Telephone1",
+            "IsActive": true,
+            "Type": "Telephone",
+            "ParentElementId": "@OmniProcessElementRef7",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Employer Phone\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":false,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"mask\":\"(999) 999-9999\",\"pattern\":\"\",\"ptrnErrText\":\"\",\"minLength\":0,\"maxLength\":255,\"placeholder\":\"\",\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 2,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef45"
+            },
+            "Name": "DataMapperPostAction1",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "PropertySetConfig": "{\"redirectPageName\":\"\",\"failureAbortLabel\":\"Abort\",\"ssm\":false,\"redirectPreviousLabel\":\"Previous\",\"remoteTimeout\":30000.0,\"postMessage\":\"Done\",\"redirectNextWidth\":3.0,\"enableActionMessage\":false,\"businessEvent\":\"\",\"validationRequired\":\"Submit\",\"bundle\":\"MappingPersonalDetails\",\"pubsub\":false,\"sendJSONNode\":\"\",\"failureAbortMessage\":\"Are you sure?\",\"postTransformBundle\":\"\",\"controlWidth\":12.0,\"inProgressMessage\":\"In Progress\",\"errorMessage\":{\"custom\":[]},\"showPersistentComponent\":[true,false],\"label\":\"MappingPersonalDetails\",\"message\":{},\"redirectNextLabel\":\"Next\",\"wpm\":false,\"sendJSONPath\":\"\",\"businessCategory\":\"\",\"redirectTemplateUrl\":\"vlcAcknowledge.html\",\"failureNextLabel\":\"Continue\",\"failureGoBackLabel\":\"Go Back\",\"redirectPreviousWidth\":3.0,\"HTMLTemplateId\":\"\",\"enableDefaultAbort\":false}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef46"
+            },
+            "Name": "panNumber",
+            "IsActive": true,
+            "Type": "Text",
+            "ParentElementId": "@OmniProcessElementRef1",
+            "PropertySetConfig": "{\"controlWidth\":12,\"label\":\"Tax Number\",\"showInputWidth\":false,\"inputWidth\":12,\"required\":true,\"repeat\":false,\"repeatClone\":false,\"repeatLimit\":null,\"readOnly\":false,\"defaultValue\":null,\"help\":false,\"helpText\":\"\",\"mask\":\"\",\"pattern\":\"\",\"ptrnErrText\":\"\",\"minLength\":0,\"maxLength\":255,\"placeholder\":\"Enter TAX Number...\",\"show\":null,\"conditionType\":\"Hide if False\",\"accessibleInFutureSteps\":false,\"debounceValue\":0,\"HTMLTemplateId\":\"\",\"hide\":false,\"disOnTplt\":false}",
+            "SequenceNumber": 2,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef1"
+        }
+    ]
+}

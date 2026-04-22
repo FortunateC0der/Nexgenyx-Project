@@ -1,0 +1,286 @@
+<template>
+    <section class="apply-page">
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="eyebrow">NEXGENYX BANK</p>
+                <h1>Start Your Loan Application</h1>
+                <p class="hero-text">
+                    Complete your application in a few simple steps with a secure and guided digital experience.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-wrap">
+            <div class="progress-card">
+                <div class={step1Class}>
+                    <span>1</span>
+                    <p>Personal</p>
+                </div>
+                <div class="progress-line"></div>
+
+                <div class={step2Class}>
+                    <span>2</span>
+                    <p>Financial</p>
+                </div>
+                <div class="progress-line"></div>
+
+                <div class={step3Class}>
+                    <span>3</span>
+                    <p>Loan Details</p>
+                </div>
+                <div class="progress-line"></div>
+
+                <div class={step4Class}>
+                    <span>4</span>
+                    <p>Documents</p>
+                </div>
+                <div class="progress-line"></div>
+
+                <div class={step5Class}>
+                    <span>5</span>
+                    <p>Review</p>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <div class="section-heading">
+                    <h2>Application Details</h2>
+                    <p>Please fill in the information below to begin.</p>
+                </div>
+
+                <template if:true={isStep1}>
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-grid">
+                            <lightning-input
+                                label="First Name"
+                                value={firstName}
+                                data-field="firstName"
+                                onchange={handleInputChange}>
+                            </lightning-input>
+
+                            <lightning-input
+                                label="Last Name"
+                                value={lastName}
+                                data-field="lastName"
+                                onchange={handleInputChange}>
+                            </lightning-input>
+
+                            <lightning-input
+                                type="email"
+                                label="Email Address"
+                                value={email}
+                                data-field="email"
+                                onchange={handleInputChange}>
+                            </lightning-input>
+
+                            <lightning-input
+                                type="tel"
+                                label="Phone Number"
+                                value={phone}
+                                data-field="phone"
+                                onchange={handleInputChange}>
+                            </lightning-input>
+                        </div>
+                    </div>
+                </template>
+
+                <template if:true={isStep2}>
+                    <div class="form-section">
+                        <h3>Financial Information</h3>
+                        <div class="form-grid">
+                            <lightning-input
+                                type="number"
+                                label="Monthly Income"
+                                value={monthlyIncome}
+                                data-field="monthlyIncome"
+                                onchange={handleInputChange}>
+                            </lightning-input>
+
+                            <lightning-input
+                                type="number"
+                                label="Existing Monthly EMIs"
+                                value={existingEmis}
+                                data-field="existingEmis"
+                                onchange={handleInputChange}>
+                            </lightning-input>
+                        </div>
+                    </div>
+                </template>
+
+                <template if:true={isStep3}>
+                    <div class="form-section">
+                        <h3>Loan Information</h3>
+                        <div class="form-grid">
+                            <lightning-combobox
+                                label="Loan Type"
+                                placeholder="Select Loan Type"
+                                value={loanType}
+                                options={loanTypeOptions}
+                                data-field="loanType"
+                                onchange={handleInputChange}>
+                            </lightning-combobox>
+
+                            <lightning-input
+                                type="number"
+                                label="Loan Amount"
+                                value={loanAmount}
+                                data-field="loanAmount"
+                                onchange={handleInputChange}>
+                            </lightning-input>
+
+                            <lightning-input
+                                type="number"
+                                label="Loan Tenure (Months)"
+                                value={loanTenure}
+                                data-field="loanTenure"
+                                onchange={handleInputChange}>
+                            </lightning-input>
+
+                            <lightning-combobox
+                                label="Interest Type"
+                                placeholder="Select Interest Type"
+                                value={interestType}
+                                options={interestTypeOptions}
+                                data-field="interestType"
+                                onchange={handleInputChange}>
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                </template>
+
+                <template if:true={isStep4}>
+                    <div class="form-section">
+                        <h3>Supporting Documents</h3>
+                        <p class="section-subtext">
+                            Upload the required supporting documents to complete your application.
+                        </p>
+
+                        <div class="upload-grid">
+                            <div class="upload-card">
+                                <div class="upload-header">
+                                    <h4>ID Proof</h4>
+                                    <span class="upload-badge">Required</span>
+                                </div>
+                                <p>Upload your ID document or passport.</p>
+                                <div class="upload-box">
+                                    <p>Drag and drop file here</p>
+                                    <span>or</span>
+                                    <button class="upload-btn" type="button">Choose File</button>
+                                </div>
+                            </div>
+
+                            <div class="upload-card">
+                                <div class="upload-header">
+                                    <h4>Address Proof</h4>
+                                    <span class="upload-badge">Required</span>
+                                </div>
+                                <p>Upload a utility bill or proof of residence.</p>
+                                <div class="upload-box">
+                                    <p>Drag and drop file here</p>
+                                    <span>or</span>
+                                    <button class="upload-btn" type="button">Choose File</button>
+                                </div>
+                            </div>
+
+                            <div class="upload-card">
+                                <div class="upload-header">
+                                    <h4>Income Proof</h4>
+                                    <span class="upload-badge">Required</span>
+                                </div>
+                                <p>Upload your payslip or bank statement.</p>
+                                <div class="upload-box">
+                                    <p>Drag and drop file here</p>
+                                    <span>or</span>
+                                    <button class="upload-btn" type="button">Choose File</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+                <template if:true={isStep5}>
+                    <div class="form-section">
+                        <h3>Review Your Application</h3>
+
+                        <div class="review-grid">
+                            <div class="review-item">
+                                <span>First Name</span>
+                                <strong>{firstName}</strong>
+                            </div>
+                            <div class="review-item">
+                                <span>Last Name</span>
+                                <strong>{lastName}</strong>
+                            </div>
+                            <div class="review-item">
+                                <span>Email Address</span>
+                                <strong>{email}</strong>
+                            </div>
+                            <div class="review-item">
+                                <span>Phone Number</span>
+                                <strong>{phone}</strong>
+                            </div>
+                            <div class="review-item">
+                                <span>Monthly Income</span>
+                                <strong>{monthlyIncome}</strong>
+                            </div>
+                            <div class="review-item">
+                                <span>Existing Monthly EMIs</span>
+                                <strong>{existingEmis}</strong>
+                            </div>
+                            <div class="review-item">
+                                <span>Loan Type</span>
+                                <strong>{loanType}</strong>
+                            </div>
+                            <div class="review-item">
+                                <span>Loan Amount</span>
+                                <strong>{loanAmount}</strong>
+                            </div>
+                            <div class="review-item">
+                                <span>Loan Tenure</span>
+                                <strong>{loanTenure}</strong>
+                            </div>
+                            <div class="review-item">
+                                <span>Interest Type</span>
+                                <strong>{interestType}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+                <div class="info-banner">
+                    Your application and documents will be reviewed securely, and you’ll be able to track progress from your borrower dashboard.
+                </div>
+
+                <div class="actions">
+                    <button
+                        class="btn-secondary"
+                        type="button"
+                        onclick={handlePrevious}
+                        disabled={isFirstStep}>
+                        Previous
+                    </button>
+
+                    <template if:false={isStep5}>
+                        <button
+                            class="btn-primary"
+                            type="button"
+                            onclick={handleNext}>
+                            Next
+                        </button>
+                    </template>
+
+                    <template if:true={isStep5}>
+                        <button
+                            class="btn-primary"
+                            type="button"
+                            onclick={handleSubmit}>
+                            Submit Application
+                        </button>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

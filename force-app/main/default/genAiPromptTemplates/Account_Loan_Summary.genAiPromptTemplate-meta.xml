@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>gebFC7ghk+ayhX0rUktPiUToCFxa+suUADyqk4MECNo=_1</activeVersionIdentifier>
+    <developerName>Account_Loan_Summary</developerName>
+    <masterLabel>Account Loan Summary</masterLabel>
+    <overridable>false</overridable>
+    <templateVersions>
+        <content>Retrieve data for the Account object and its related records. 
+For each Account, include:
+- Account Name: {!$Input:Account.Name}
+- Account ID: {!$Input:Account.Id}
+- Industry: {!$Input:Account.Industry}
+- Annual Revenue: {!$Input:Account.AnnualRevenue}
+- PAN Number: {!$Input:Account.PAN_Number__c}
+
+Also retrieve related objects:
+1. Residential Loan Application: {!$RelatedList:Account.ResidentialLoanApplicationAccount.Records}
+2. Loan Applicant Employment: Employment Type: {!$RelatedList:ResidentialLoanApplication.LoanApplicantEmployments.Records}
+3. Loan Application Liability: {!$RelatedList:ResidentialLoanApplication.LoanApplicationLiabilities.Records}
+4. Loan Applicant: {!$RelatedList:ResidentialLoanApplication.LoanApplicants.Records}
+
+Return the data in readable format, grouped by Account, with nested arrays for each related object. Do not mention this at the end just write, this is the summary of this accounts loan application
+
+Do not include ID, Record Type Id, Last Modified Date and created date
+
+</content>
+        <inputs>
+            <apiName>Account</apiName>
+            <definition>SOBJECT://Account</definition>
+            <masterLabel>Account</masterLabel>
+            <referenceName>Input:Account</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>ResidentialLoanApplication</apiName>
+            <definition>SOBJECT://ResidentialLoanApplication</definition>
+            <masterLabel>ResidentialLoanApplication</masterLabel>
+            <referenceName>Input:ResidentialLoanApplication</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <description>Gets a related list for the specified parent record id and related list name</description>
+            <label>Residential Loan Applications</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Account.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>ResidentialLoanApplicationAccount</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Account.ResidentialLoanApplicationAccount.Records</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <description>Gets a related list for the specified parent record id and related list name</description>
+            <label>Loan Applicant Employments</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:ResidentialLoanApplication.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>LoanApplicantEmployments</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:ResidentialLoanApplication.LoanApplicantEmployments.Records</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <description>Gets a related list for the specified parent record id and related list name</description>
+            <label>Loan Applicant Liabilities</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:ResidentialLoanApplication.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>LoanApplicationLiabilities</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:ResidentialLoanApplication.LoanApplicationLiabilities.Records</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <description>Gets a related list for the specified parent record id and related list name</description>
+            <label>Loan Applicants</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:ResidentialLoanApplication.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>LoanApplicants</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:ResidentialLoanApplication.LoanApplicants.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>gebFC7ghk+ayhX0rUktPiUToCFxa+suUADyqk4MECNo=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

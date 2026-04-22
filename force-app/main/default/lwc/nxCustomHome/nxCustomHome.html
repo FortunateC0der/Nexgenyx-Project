@@ -1,0 +1,25 @@
+<template>
+    <div class="section">
+
+        <h2 class="title">Why Choose NexGenyx Loans</h2><br>
+        <p class="subtitle">
+            Designed to make borrowing simple, fast, and accessible.
+        </p><br><br>
+
+        <div class="grid">
+            <template for:each={features} for:item="item">
+                <div key={item.title} class="card">
+
+                    <div class="icon">
+                        <img src={item.icon} alt="icon"/>
+                    </div>
+
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+
+                </div>
+            </template>
+        </div>
+
+    </div>
+</template>

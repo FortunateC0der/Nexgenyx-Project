@@ -1,0 +1,50 @@
+<template>
+    <section class="upload-page">
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="eyebrow">Borrower Portal</p>
+                <h1>Upload Supporting Documents</h1>
+                <p class="hero-text">
+                    Submit the required documents for your application securely and keep your loan process moving.
+                </p>
+            </div>
+        </div>
+
+        <div class="upload-wrap">
+            <div class="notice-card">
+                <h2>Required Documents</h2>
+                <p>
+                    Please upload your supporting documents below. This flow accepts the required files and updates your document checklist.
+                </p>
+            </div>
+
+            <div class="flow-card">
+                <h2>Document Upload</h2>
+                <p class="flow-text">
+                    Complete the steps below to upload all required files in one go.
+                </p>
+
+                <lightning-flow
+                    flow-api-name={flowApiName}
+                    flow-input-variables={inputVariables}
+                    onstatuschange={handleStatusChange}>
+                </lightning-flow>
+            </div>
+
+            <div class="tips-card">
+                <h2>Upload Tips</h2>
+                <ul>
+                    <li>Use PDF, JPG, or PNG files.</li>
+                    <li>Make sure the text is clear and readable.</li>
+                    <li>Upload the latest version of each document.</li>
+                    <li>Do not password-protect your files.</li>
+                </ul>
+            </div>
+
+            <div class="action-bar">
+                <a href="/nexgenyxbank/my-loans" class="secondary-btn">Back to My Loans</a>
+            </div>
+        </div>
+    </section>
+</template>

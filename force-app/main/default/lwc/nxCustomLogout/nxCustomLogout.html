@@ -1,0 +1,11 @@
+<template>
+    <template if:true={isLoggedIn}>
+        <div class="logout-container">
+            <lightning-button 
+                label="Logout" 
+                onclick={handleLogout}
+                class="logout-btn">
+            </lightning-button>
+        </div>
+    </template>
+</template>

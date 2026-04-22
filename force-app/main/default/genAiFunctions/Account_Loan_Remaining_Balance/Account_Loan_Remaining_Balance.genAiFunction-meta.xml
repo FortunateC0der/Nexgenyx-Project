@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Use this action when a user asks about their remaining loan balance, or down payment date. This action fetches live data from the Loan Account object for the current user.</description>
+    <developerName>Account_Loan_Remaining_Balance</developerName>
+    <invocationTarget>Loan_Remaining_Balance</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Account_Loan_Remaining_Balance</localDeveloperName>
+    <masterLabel>Account Loan Remaining Balance</masterLabel>
+    <progressIndicatorMessage>One moment, let me check our banking records for you...</progressIndicatorMessage>
+</GenAiFunction>

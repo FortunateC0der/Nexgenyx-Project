@@ -1,0 +1,186 @@
+<template>
+    <section class="dashboard-page">
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="eyebrow">Borrower Dashboard</p>
+                <h1>My Loans</h1>
+                <p class="hero-text">
+                    Track your applications, monitor progress, and stay updated on every stage of your loan journey.
+                </p>
+            </div>
+        </div>
+
+        <div class="dashboard-wrap">
+            <template if:true={hasDashboard}>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <p class="label">Total Applications</p>
+                        <h2>{dashboard.totalApplications}</h2>
+                    </div>
+
+                    <div class="summary-card">
+                        <p class="label">Approved</p>
+                        <h2>{dashboard.approvedCount}</h2>
+                    </div>
+
+                    <div class="summary-card">
+                        <p class="label">In Progress</p>
+                        <h2>{dashboard.inProgressCount}</h2>
+                    </div>
+
+                    <div class="summary-card">
+                        <p class="label">Rejected</p>
+                        <h2>{dashboard.rejectedCount}</h2>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <div class="table-header">
+                        <div>
+                            <h2>Application Overview</h2>
+                            <p>Below is a summary of your recent loan applications.</p>
+                        </div>
+                    </div>
+
+                    <template if:true={hasApplications}>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Reference</th>
+                                        <th>Loan Type</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Documents</th>
+                                        <th>Last Updated</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <template for:each={dashboard.applications} for:item="app">
+                                        <tr key={app.recordId}>
+                                            <td>{app.referenceNumber}</td>
+                                            <td>{app.loanType}</td>
+                                            <td>{app.formattedAmount}</td>
+
+                                            <td>
+                                                <span class={app.badgeClass}>
+                                                    {app.status}
+                                                </span>
+                                            </td>
+
+                                            <td>
+                                                <template if:true={app.hasDocuments}>
+                                                    <span class="doc-uploaded">
+                                                        ✓ Uploaded
+                                                    </span>
+                                                </template>
+
+                                                <template if:false={app.hasDocuments}>
+                                                    <a href={app.uploadUrl} class="upload-btn">
+                                                        Upload
+                                                    </a>
+                                                </template>
+                                            </td>
+
+                                            <td>{app.formattedLastUpdated}</td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </template>
+
+                    <template if:false={hasApplications}>
+                        <p>No loan applications found for your profile yet.</p>
+                    </template>
+                </div>
+
+                <div class="status-card">
+                    <h2>Loan Status Guide</h2>
+
+                    <div class="status-grid">
+                        <div class="status-item">
+                            <span class="dot new"></span>
+                            <div>
+                                <h3>New</h3>
+                                <p>Your application has been submitted successfully.</p>
+                            </div>
+                        </div>
+
+                        <div class="status-item">
+                            <span class="dot pending"></span>
+                            <div>
+                                <h3>Pending</h3>
+                                <p>Your application is waiting for the next processing step.</p>
+                            </div>
+                        </div>
+
+                        <div class="status-item">
+                            <span class="dot review"></span>
+                            <div>
+                                <h3>Review</h3>
+                                <p>Your application is currently being reviewed.</p>
+                            </div>
+                        </div>
+
+                        <div class="status-item">
+                            <span class="dot risk"></span>
+                            <div>
+                                <h3>Risk Assessment</h3>
+                                <p>Your risk profile is being assessed.</p>
+                            </div>
+                        </div>
+
+                        <div class="status-item">
+                            <span class="dot adjudicator"></span>
+                            <div>
+                                <h3>Adjudicator</h3>
+                                <p>Your application is with the adjudication team for a decision.</p>
+                            </div>
+                        </div>
+
+                        <div class="status-item">
+                            <span class="dot approved"></span>
+                            <div>
+                                <h3>Approved</h3>
+                                <p>Your loan has been approved.</p>
+                            </div>
+                        </div>
+
+                        <div class="status-item">
+                            <span class="dot rejected"></span>
+                            <div>
+                                <h3>Rejected</h3>
+                                <p>Your application did not meet the lending criteria.</p>
+                            </div>
+                        </div>
+
+                        <div class="status-item">
+                            <span class="dot completed"></span>
+                            <div>
+                                <h3>Completed</h3>
+                                <p>Your application has been completed successfully.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={message}>
+                <div class="table-card">
+                    <h2>My Loans</h2>
+                    <p>{message}</p>
+                </div>
+            </template>
+
+            <template if:true={errorMessage}>
+                <div class="table-card">
+                    <h2>My Loans</h2>
+                    <p>{errorMessage}</p>
+                </div>
+            </template>
+        </div>
+    </section>
+</template>
