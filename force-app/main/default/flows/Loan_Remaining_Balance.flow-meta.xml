@@ -31,10 +31,10 @@
             <name>Logged_In</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>getEmail.Account.PersonContact.Id</leftValueReference>
+                <leftValueReference>getEmail.Account.Id</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>userAccountId</elementReference>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -192,13 +192,13 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$User.ContactId</elementReference>
+                <elementReference>$User.Id</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>User</object>
         <queriedFields>Id</queriedFields>
-        <queriedFields>ContactId</queriedFields>
+        <queriedFields>AccountId</queriedFields>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
@@ -208,7 +208,7 @@
             <targetReference>getEmail</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <textTemplates>
         <name>nextLine</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
