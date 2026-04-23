@@ -52,7 +52,7 @@
         <expression>{!$User.ContactId}</expression>
     </formulas>
     <interviewLabel>New Documents Upload {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>New Builder</label>
+    <label>nxUpload Flow</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -168,7 +168,7 @@
             <targetReference>Upload_Documents</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>contactId</name>
         <dataType>Boolean</dataType>
