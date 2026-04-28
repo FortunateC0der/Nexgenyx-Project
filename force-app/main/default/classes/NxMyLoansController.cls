@@ -173,7 +173,7 @@ public with sharing class NxMyLoansController {
 
                 row.hasDocuments = loanIdsWithAllRequiredDocs.contains(appId);
                 row.documentsLabel = row.hasDocuments ? '✓ Uploaded' : 'Upload';
-                row.uploadUrl = row.hasDocuments ? null : '/nexgenyxbank/upload-documents?loanId=' + appId;
+                row.uploadUrl = row.hasDocuments ? null : '/NexGenyxBank/upload-documents?loanId=' + appId;
 
                 summary.applications.add(row);
                 summary.totalApplications++;

@@ -790,9 +790,6 @@ TEXT({!Copy_1_of_Get_Single_Application.Status})</expression>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
-        <limit>
-            <numberValue>10.0</numberValue>
-        </limit>
         <object>ResidentialLoanApplication</object>
         <queriedFields>Id</queriedFields>
         <queriedFields>Status</queriedFields>

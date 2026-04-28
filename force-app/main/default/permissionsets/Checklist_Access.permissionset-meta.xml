@@ -52,7 +52,7 @@
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Checklist Access</label>
-    <license>Customer Community Plus</license>
+    <license>Customer Community Login</license>
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>

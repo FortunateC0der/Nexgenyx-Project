@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <description>Route to Service Agent</description>
-        <name>Route_to_Agent</name>
-        <label>Route to Agent</label>
+        <name>Service_Agent_Route_to_Work</name>
+        <label>Service Agent Route to Work</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>routeWork</actionName>
@@ -30,14 +29,14 @@
         <inputParameters>
             <name>routingType</name>
             <value>
-                <stringValue>Copilot</stringValue>
+                <stringValue>Agent</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
-            <name>routingConfigLabel</name>
-        </inputParameters>
-        <inputParameters>
             <name>agentLabel</name>
+            <value>
+                <stringValue>EinsteinServiceAgent User</stringValue>
+            </value>
         </inputParameters>
         <inputParameters>
             <name>queueLabel</name>
@@ -59,9 +58,6 @@
         </inputParameters>
         <inputParameters>
             <name>copilotLabel</name>
-            <value>
-                <stringValue>Loan Product Assistance</stringValue>
-            </value>
         </inputParameters>
         <inputParameters>
             <name>agentforceEmployeeAgentLabel</name>
@@ -74,17 +70,10 @@
             </value>
         </inputParameters>
         <inputParameters>
-            <name>routingConfigId</name>
-        </inputParameters>
-        <inputParameters>
             <name>botId</name>
         </inputParameters>
         <inputParameters>
             <name>copilotId</name>
-            <value>
-                <setupReference>Loan_Product_Assistance</setupReference>
-                <setupReferenceType>BotDefinition</setupReferenceType>
-            </value>
         </inputParameters>
         <inputParameters>
             <name>agentforceEmployeeAgentId</name>
@@ -95,22 +84,24 @@
         <inputParameters>
             <name>queueId</name>
             <value>
-                <stringValue>00Gd30000021DoTEAU</stringValue>
+                <stringValue>00GTA00000KhHdB2AV</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
             <name>agentId</name>
+            <value>
+                <stringValue>005TA00000TdnTPYAZ</stringValue>
+            </value>
         </inputParameters>
         <nameSegment>routeWork</nameSegment>
         <offset>0</offset>
         <versionString>2.0.0</versionString>
     </actionCalls>
-    <apiVersion>65.0</apiVersion>
+    <apiVersion>66.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
-    <description>Routes each message to an agent or queue based on conditions that you define.</description>
     <environments>Default</environments>
-    <interviewLabel>Messages Routed to Agents and Queues {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Messages Routed to Agents and Queues</label>
+    <interviewLabel>Service Agent Route To Work {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Service Agent Route To Work</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -123,49 +114,22 @@
             <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
     <processType>RoutingFlow</processType>
-    <recordLookups>
-        <description>Get messaging session matching the record ID</description>
-        <name>GetMessagingSession</name>
-        <label>Get Messaging Session</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Route_to_Agent</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>MessagingSession</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <sourceTemplate>omnichannel_messaging__MsgRouting</sourceTemplate>
     <start>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>GetMessagingSession</targetReference>
+            <targetReference>Service_Agent_Route_to_Work</targetReference>
         </connector>
     </start>
     <status>Active</status>
     <variables>
-        <description>The messaging session record that is being inputted into the flow. Necessary for the flow to run.</description>
-        <name>input_record</name>
-        <dataType>SObject</dataType>
-        <isCollection>false</isCollection>
-        <isInput>true</isInput>
-        <isOutput>false</isOutput>
-        <objectType>MessagingSession</objectType>
-    </variables>
-    <variables>
-        <description>The ID of the record being inputted into the flow. Necessary for the flow to run.</description>
         <name>recordId</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>

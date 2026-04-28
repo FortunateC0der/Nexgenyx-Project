@@ -172,11 +172,11 @@ public without sharing class nxCustomRegister {
             }
 
             // Log in immediately and redirect
-            PageReference loginRef = Site.login(email, password, '/nexgenyxbank/my-loans');
+            PageReference loginRef = Site.login(email, password, '/NexGenyxBank/my-loans');
 
             res.success = true;
             res.message = 'Registration successful.';
-            res.redirectUrl = (loginRef != null) ? loginRef.getUrl() : '/nexgenyxbank/my-loans';
+            res.redirectUrl = (loginRef != null) ? loginRef.getUrl() : '/NexGenyxBank/my-loans';
             return res;
 
         } catch (QueryException qe) {

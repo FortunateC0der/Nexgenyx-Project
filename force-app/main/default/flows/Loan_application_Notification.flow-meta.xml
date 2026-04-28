@@ -12,7 +12,7 @@
             <name>recipientAddresses</name>
             <value>
                 <collectionElements>
-                    <elementReference>$Record.Account.PersonEmail</elementReference>
+                    <stringValue>nkosingiphile.maseko@indsafri.com</stringValue>
                 </collectionElements>
             </value>
         </inputParameters>
@@ -32,7 +32,14 @@
             <name>emailBody</name>
             <value>
                 <inputConfiguratorMode>Custom</inputConfiguratorMode>
-                <stringValue>&lt;p&gt;Dear {!$Record.Account.LastName} {!$Record.Account.FirstName},&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Your loan application has been rejected due to the following reason: {!$Record.Exception_Comment__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Askies.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Kind regards,&lt;/p&gt;&lt;p&gt;NextGenyx&lt;/p&gt;</stringValue>
+                <stringValue>Dear {!$Record.Account.LastName} {!$Record.Account.FirstName},
+
+Your loan application has been rejected due to the following reason: {!$Record.Exception_Comment__c}
+
+Askies.
+
+Kind regards,
+NextGenyx</stringValue>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -71,7 +78,7 @@
             <name>emailBody</name>
             <value>
                 <inputConfiguratorMode>Custom</inputConfiguratorMode>
-                <stringValue>&lt;p&gt;Dear {!$Record.Account.FirstName} {!$Record.Account.LastName},&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Your application has been submitted successfully. One of our staff will review your application.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Thank you.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Kind regards,&lt;/p&gt;&lt;p&gt;NextGenyx&lt;/p&gt;</stringValue>
+                <stringValue>&lt;p&gt;Dear {!$Record.Account.FirstName} {!$Record.Account.LastName},&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Your application has been submitted successfully. One of our staff will review your application.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Thank you.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Kind regards,&lt;/p&gt;&lt;p&gt;NextGenyx&lt;/p&gt;</stringValue>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -90,7 +97,7 @@
             <name>recipientAddresses</name>
             <value>
                 <collectionElements>
-                    <stringValue>bahula.nkele@gmail.com</stringValue>
+                    <stringValue>nkosingiphile.maseko@indsafri.com</stringValue>
                 </collectionElements>
             </value>
         </inputParameters>
@@ -129,7 +136,7 @@
             <name>recipientAddresses</name>
             <value>
                 <collectionElements>
-                    <elementReference>$Record.Account.PersonEmail</elementReference>
+                    <stringValue>nkosingiphile.maseko@indsafri.com</stringValue>
                 </collectionElements>
             </value>
         </inputParameters>
@@ -149,7 +156,14 @@
             <name>emailBody</name>
             <value>
                 <inputConfiguratorMode>Custom</inputConfiguratorMode>
-                <stringValue>&lt;p&gt;Dear&lt;/p&gt;&lt;p&gt;{!$Record.Account.FirstName} {!$Record.Account.LastName},&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Your application has been approved. Please check your account within 2-4 hours.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Thank you.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Kind regards,&lt;/p&gt;&lt;p&gt;NextGenyx&lt;/p&gt;</stringValue>
+                <stringValue>Dear {!$Record.Account.FirstName} {!$Record.Account.LastName},
+
+Your application has been approved. Please check your account within 2-4 hours.
+
+Thank you.
+
+Kind regards,
+NextGenyx</stringValue>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -168,7 +182,7 @@
             <name>recipientAddresses</name>
             <value>
                 <collectionElements>
-                    <stringValue>fortunate.mothoana@gmail.com</stringValue>
+                    <stringValue>nkosingiphile.maseko@indsafri.com</stringValue>
                 </collectionElements>
             </value>
         </inputParameters>
@@ -188,7 +202,12 @@
             <name>emailBody</name>
             <value>
                 <inputConfiguratorMode>Custom</inputConfiguratorMode>
-                <stringValue>&lt;p&gt;Dear Fortunate,&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;An application is awaiting for your review. Please kindly login onto the NextGenyx App.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Kind regards,&lt;/p&gt;&lt;p&gt;NextGeynx&lt;/p&gt;</stringValue>
+                <stringValue>Dear Fortunate,
+
+An application is waiting for your review. Please kindly login onto the NextGenyx App.
+
+Kind regards,
+NextGeynx</stringValue>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -210,7 +229,7 @@
             <name>recipientAddresses</name>
             <value>
                 <collectionElements>
-                    <stringValue>thatomelida@gmail.com</stringValue>
+                    <stringValue>nkosingiphile.maseko@indsafri.com</stringValue>
                 </collectionElements>
             </value>
         </inputParameters>
@@ -230,7 +249,12 @@
             <name>emailBody</name>
             <value>
                 <inputConfiguratorMode>Custom</inputConfiguratorMode>
-                <stringValue>&lt;p&gt;Dear Thato,&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;An application is awaiting for your review. Please kindly login onto the NextGenyx App.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Kind regards,&lt;/p&gt;&lt;p&gt;NextGeynx&lt;/p&gt;</stringValue>
+                <stringValue>Dear Thato,
+
+An application is waiting for your review. Please kindly login onto the NextGenyx App.
+
+Kind regards,
+NextGeynx</stringValue>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -470,7 +494,7 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>lendingOfficer</name>
         <dataType>String</dataType>

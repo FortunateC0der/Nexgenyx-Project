@@ -507,10 +507,7 @@
         <viewAllFields>false</viewAllFields>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
-    <recordTypeVisibilities>
-        <recordType>Account.Business</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
+
     <recordTypeVisibilities>
         <recordType>Account.Household</recordType>
         <visible>true</visible>
