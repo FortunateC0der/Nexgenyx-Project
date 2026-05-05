@@ -333,7 +333,7 @@
             <targetReference>Upload_Documents</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>contactId</name>
         <dataType>Boolean</dataType>
